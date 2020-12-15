@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>View source for Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS - Lab Journal Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS","wgTitle":"Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS","wgCurRevisionId":737,"wgRevisionId":0,"wgArticleId":127,"wgIsArticle":!1,"wgIsRedirect":!1,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":!0,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":
+"Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS","wgRelevantArticleId":127,"wgRequestId":"d86afdc2f73351edff080c69","wgCSPNonce":!1,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["ext.smw.style","ext.smw.table.styles","smw.factbox","mediawiki.action.edit.collapsibleFooter","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.searchSuggest","ext.scite.styles","ext.scite.tooltip","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=ext.scite.styles|ext.smw.style|ext.smw.tooltip.styles&amp;only=styles&amp;skin=vector.css"/>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|skins.vector.styles&amp;only=styles&amp;skin=vector.css"/>
+<script async="" src="load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.34.2"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS" href="./index.php%3Ftitle=Special:ExportRDF%252FResearch:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Lab Journal Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api.php%3Faction=rsd"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Research_Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing_Ultimate_ALS rootpage-Research_Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing skin-vector action-edit">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">View source for Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		
+		<div id="contentSub">← <a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS</a></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;action=edit.html#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;action=edit.html#p-search">Jump to search</a>
+		<div id="mw-content-text"><p>You do not have permission to edit this page, for the following reason:
+</p>
+<div class="permissions-errors">
+<p>The action you have requested is limited to users in the group: <a href="https://wiki.nya.pink/index.php?title=Lab_Journal_Wiki:Users&amp;action=edit&amp;redlink=1" class="new" title="Lab Journal Wiki:Users (page does not exist)">Users</a>.
+</p>
+</div><hr />
+<p>You can view and copy the source of this page.
+</p><textarea readonly="" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" class="mw-editfont-monospace" lang="en" dir="ltr" name="wpTextbox1">Suppose we can reduce the problem to:
+:&lt;math>
+\begin{cases}
+RR^T X = X\\
+R^TR = I
+\end{cases}
+&lt;/math>
+
+Or, since &lt;math>X = UV^T&lt;/math>:
+:&lt;math>
+\begin{cases}
+RR^T UV^T = UV^T\\
+R^TR = I
+\end{cases}
+&lt;/math>
+
+==Rank=1==
+
+Let's first solve rank=1 case.
+
+In this case, second equation is easy:
+&lt;math>
+r_1^2 + r_2^2 + \cdots + r_n^2 = 1
+&lt;/math>
+
+First equation is harder, but still can be expressed in an easy-to-understand form. First, let's compute &lt;math>RR^T&lt;/math>:
+:&lt;math>
+RR^T = 
+\begin{bmatrix}
+{\color{red}r_1^2}   &amp; {\color{red}r_1 r_2} &amp; {\color{red}\cdots} &amp; {\color{red}r_1 r_n}\\
+r_2 r_1 &amp; {\color{red}r_2^2}   &amp; {\color{red}\cdots} &amp; {\color{red}r_2 r_n}\\
+\vdots  &amp; \vdots  &amp; {\color{red}\ddots} &amp; {\color{red}\vdots} \\
+r_n r_1 &amp; r_n r_2 &amp; \cdots &amp; {\color{red}r_n^2}
+\end{bmatrix}
+&lt;/math>
+
+Idea: If we have a quadratic system of &lt;math>n&lt;/math> unknowns, we can express it as a linear system of equations of &lt;math>n (n - 1)&lt;/math> unknowns, where each unknown would correspond to a product of some of these two unknowns. We then solve it to get values for products of all &lt;math>n (n - 1)&lt;/math> unknowns. After that, we can just take the squared terms, and take square roots of their values to get the result!
+
+Overall, system above gives us &lt;math>n^2 + 1&lt;/math> equations in &lt;math>n^2 - n&lt;/math> linear unknowns. If we had higher rank, we would have had &lt;math>n^2r^2 - nr&lt;/math> unknowns. For &lt;math>r&lt;/math> large enough, the system above would be under determined. Actually, in rank>1 case, we would have a system of &lt;math>n^2 + r^2&lt;/math> equations.
+
+TODO: can equate the two above. I.e. &lt;math>n^2 + r^2 = n^2r^2 - nr&lt;/math>. Find when they intersect. Apparently, this only works in rank=1 case. I guess for larger ranks, we would have to replace say &lt;math>x^2&lt;/math> by &lt;math>x^T x&lt;/math>. This will probably account for the degeneracy. It will also make computing things slightly harder as we would need more than &lt;math>n&lt;/math> equations. In fact, we would need &lt;math>n r&lt;/math> equations.
+
+But maybe that's still ok. At the very least, in rank=1, we might be able to get a generic analytic expression for those &lt;math>n^2 - n&lt;/math> variables, and then just extract &lt;math>n&lt;/math> variables from them.
+
+'''Question''': would linearized system give identity as an answer?
+
+'''Answer''': No. The orthonormality property
+&lt;math>
+r_1^2 + r_2^2 + \cdots + r_n^2 = 1
+&lt;/math>
+will not work if we were to set all diagonal terms to ones.
+
+Note: Actually, we can probably get away with having to use only &lt;math>\frac{n (n+1)}{2}&lt;/math> unknown linear variables. In summary, we have:
+* system of &lt;math>n^2 + r^2&lt;/math> equations
+* &lt;math>\frac{n (n+1)}{2}&lt;/math> unknown linear variables
+
+I believe we should also be able to fix &lt;math>r^2&lt;/math> variables for the vector by multiplying it by an arbitrary invertible &lt;math>r \times r&lt;/math> matrix:
+* &lt;math>\frac{n (n+1)}{2} - r^2&lt;/math> unknown linear variables
+
+'''Note''': I believe that multiplying rank=r matrices by each other gives rank=r matrices again. Hence, the first equation actually corresponds to a system of about &lt;math>2 n r&lt;/math> equations, which is probably not that bad.
+
+Actually: &lt;math>\operatorname{rank}(AB) \leq \min(\operatorname{rank}(A), \operatorname{rank}(B))&lt;/math>
+
+Actually, I think I have been over counting the number of free variables in linearized equations. We would actually just get inner products &lt;math>r_i^T r_j&lt;/math>. After solving the system of linear equations, we then would get a number for each of those. Next, we can just fix &lt;math>r&lt;/math> of those to prevent rotations, and then iteratively compute the remaining ones values by padding to construct invertible matrices (hopefully they will be invertible!).
+
+Probably not even that bad that we have to solve a linear system of &lt;math>n^2 + 1&lt;/math> equations. Oh yes, for the orthonormality constraint equation we would get something different? TODO
+
+==rank>1==
+
+:&lt;math>
+RR^T = 
+\begin{bmatrix}
+{\color{red}\langle r_1,r_1 \rangle}   &amp; {\color{red}\langle r_1, r_2 \rangle} &amp; {\color{red}\cdots} &amp; {\color{red}\langle r_1, r_n \rangle}\\
+\langle r_2, r_1 \rangle &amp; {\color{red}\langle r_2, r_2 \rangle}   &amp; {\color{red}\cdots} &amp; {\color{red}\langle r_2, r_n \rangle}\\
+\vdots  &amp; \vdots  &amp; {\color{red}\ddots} &amp; {\color{red}\vdots} \\
+\langle r_n, r_1 \rangle &amp; \langle r_n, r_2 \rangle &amp; \cdots &amp; {\color{red}\langle r_n, r_n \rangle}
+\end{bmatrix}
+&lt;/math>
+
+Here,
+:&lt;math>
+R =
+\begin{bmatrix}
+- r_1 -\\
+- r_2 -\\
+\vdots\\
+- r_n -\\
+\end{bmatrix}
+&lt;/math>
+
+RR^T X =
+Encoding orthogonality is harder, because we need to express &lt;math>R&lt;/math> differently:
+:&lt;math>
+R =
+\begin{bmatrix}
+|   &amp; |   &amp;        &amp; | \\
+k_1 &amp; k_2 &amp; \cdots &amp; k_r \\
+|   &amp; |   &amp;        &amp; |
+\end{bmatrix}
+&lt;/math>
+
+Then we have:
+:&lt;math>
+R^TR = 
+\begin{bmatrix}
+{\color{red}\langle k_1,k_1 \rangle}   &amp; {\color{red}\langle k_1, k_2 \rangle} &amp; {\color{red}\cdots} &amp; {\color{red}\langle k_1, k_r \rangle}\\
+\langle k_2, k_1 \rangle &amp; {\color{red}\langle k_2, k_2 \rangle}   &amp; {\color{red}\cdots} &amp; {\color{red}\langle k_2, k_r \rangle}\\
+\vdots  &amp; \vdots  &amp; {\color{red}\ddots} &amp; {\color{red}\vdots} \\
+\langle k_r, k_1 \rangle &amp; \langle k_r, k_2 \rangle &amp; \cdots &amp; {\color{red}\langle k_r, k_r \rangle}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1  &amp; 0 &amp; \cdots &amp; 0\\
+0 &amp; 1 &amp; \cdots &amp; 0\\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{bmatrix}
+&lt;/math>
+
+So, perhaps we can solve this in two steps. First, solve the first system, and then apply the orthonormality constraint to that solution.
+
+Now, let's write the first system &lt;math>RR^T X = X&lt;/math>:
+
+:&lt;math>
+RR^T X =
+\begin{bmatrix}
+{\color{red}\langle r_1,r_1 \rangle}   &amp; {\color{red}\langle r_1, r_2 \rangle} &amp; {\color{red}\cdots} &amp; {\color{red}\langle r_1, r_n \rangle}\\
+\langle r_2, r_1 \rangle &amp; {\color{red}\langle r_2, r_2 \rangle}   &amp; {\color{red}\cdots} &amp; {\color{red}\langle r_2, r_n \rangle}\\
+\vdots  &amp; \vdots  &amp; {\color{red}\ddots} &amp; {\color{red}\vdots} \\
+\langle r_n, r_1 \rangle &amp; \langle r_n, r_2 \rangle &amp; \cdots &amp; {\color{red}\langle r_n, r_n \rangle}
+\end{bmatrix}
+
+\begin{bmatrix}
+x_{1 1} &amp; x_{1 2} &amp; \cdots &amp; x_{1 n}\\
+x_{2 1} &amp; x_{2 2} &amp; \cdots &amp; x_{2 n}\\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots \\
+x_{n 1} &amp; x_{n 2} &amp; \cdots &amp; x_{n n}
+\end{bmatrix}
+&lt;/math>
+
+Multiply:
+:&lt;math>
+\begin{bmatrix}
+{\color{red}\langle r_1,r_1 \rangle}x_{1 1} + {\color{red}\langle r_1, r_2 \rangle}x_{2 1} + \cdots + {\color{red}\langle r_1, r_n \rangle}x_{n 1}
+&amp;
+{\color{red}\langle r_1,r_1 \rangle}x_{1 2} + {\color{red}\langle r_1, r_2 \rangle}x_{2 2} + \cdots + {\color{red}\langle r_1, r_n \rangle}x_{n 2}
+&amp; \cdots
+&amp;
+{\color{red}\langle r_1,r_1 \rangle}x_{1 n} + {\color{red}\langle r_1, r_2 \rangle}x_{2 n} + \cdots + {\color{red}\langle r_1, r_n \rangle}x_{n n}
+\\
+
+{\color{red}\langle r_2,r_1 \rangle}x_{1 1} + {\color{red}\langle r_2, r_2 \rangle}x_{2 1} + \cdots + {\color{red}\langle r_2, r_n \rangle}x_{n 1}
+&amp;
+{\color{red}\langle r_2,r_1 \rangle}x_{1 2} + {\color{red}\langle r_2, r_2 \rangle}x_{2 2} + \cdots + {\color{red}\langle r_2, r_n \rangle}x_{n 2}
+&amp; \cdots
+&amp;
+{\color{red}\langle r_2,r_1 \rangle}x_{1 n} + {\color{red}\langle r_2, r_2 \rangle}x_{2 n} + \cdots + {\color{red}\langle r_2, r_n \rangle}x_{n n}
+\\
+
+{\color{red}\langle r_3,r_1 \rangle}x_{1 1} + {\color{red}\langle r_3, r_2 \rangle}x_{2 1} + \cdots + {\color{red}\langle r_3, r_n \rangle}x_{n 1}
+&amp;
+{\color{red}\langle r_3,r_1 \rangle}x_{1 2} + {\color{red}\langle r_3, r_2 \rangle}x_{2 2} + \cdots + {\color{red}\langle r_3, r_n \rangle}x_{n 2}
+&amp; \cdots
+&amp;
+{\color{red}\langle r_3,r_1 \rangle}x_{1 n} + {\color{red}\langle r_3, r_2 \rangle}x_{2 n} + \cdots + {\color{red}\langle r_3, r_n \rangle}x_{n n}
+\\
+
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots \\
+
+{\color{red}\langle r_n,r_1 \rangle}x_{1 1} + {\color{red}\langle r_n, r_2 \rangle}x_{2 1} + \cdots + {\color{red}\langle r_n, r_n \rangle}x_{n 1}
+&amp;
+{\color{red}\langle r_n,r_1 \rangle}x_{1 2} + {\color{red}\langle r_n, r_2 \rangle}x_{2 2} + \cdots + {\color{red}\langle r_n, r_n \rangle}x_{n 2}
+&amp; \cdots
+&amp;
+{\color{red}\langle r_n,r_1 \rangle}x_{1 n} + {\color{red}\langle r_n, r_2 \rangle}x_{2 n} + \cdots + {\color{red}\langle r_n, r_n \rangle}x_{n n}
+\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_{1 1} &amp; x_{1 2} &amp; \cdots &amp; x_{1 n}\\
+x_{2 1} &amp; x_{2 2} &amp; \cdots &amp; x_{2 n}\\
+x_{3 1} &amp; x_{3 2} &amp; \cdots &amp; x_{3 n}\\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots \\
+x_{n 1} &amp; x_{n 2} &amp; \cdots &amp; x_{n n}
+\end{bmatrix}
+&lt;/math>
+
+This gives us a system of &lt;math>n^2&lt;/math> linear equations in &lt;math>\frac{n(n+1)}{2}&lt;/math> variables. For any &lt;math>n&lt;/math>, there are always more equations than variables. But I am not completely sure if those equations are independent. Need to check somehow.
+
+I really think we should just try implementing this and see how it works at least as a sanity check.
+
+Why don't we do this in steps? For example, to be begin, lets take just the first row:
+:&lt;math>
+\begin{bmatrix}
+{\color{red}\langle r_1,r_1 \rangle}   &amp; {\color{red}\langle r_1, r_2 \rangle} &amp; \cdots &amp; {\color{red}\langle r_1, r_n \rangle}
+\end{bmatrix}
+
+\begin{bmatrix}
+x_{1 1} &amp; x_{1 2} &amp; \cdots &amp; x_{1 n}\\
+x_{2 1} &amp; x_{2 2} &amp; \cdots &amp; x_{2 n}\\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots \\
+x_{n 1} &amp; x_{n 2} &amp; \cdots &amp; x_{n n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_{1 1} &amp; x_{1 2} &amp; \cdots &amp; x_{1 n}
+\end{bmatrix}
+&lt;/math>
+
+In other words:
+:&lt;math>
+\begin{bmatrix}
+{\color{red}\langle r_1,r_1 \rangle}   &amp; {\color{red}\langle r_1, r_2 \rangle} &amp; \cdots &amp; {\color{red}\langle r_1, r_n \rangle}
+\end{bmatrix}
+X
+=
+\begin{bmatrix}
+x_{1 1} &amp; x_{1 2} &amp; \cdots &amp; x_{1 n}
+\end{bmatrix}
+&lt;/math>
+
+But we know that &lt;math>X&lt;/math> is rank=r and not invertible.
+
+==Why can't we just invert it?==
+
+Consider the equation &lt;math>RR^T X = X&lt;/math>. We could "solve" it if we had some sort of inverse for &lt;math>X&lt;/math>
+
+Let's just say &lt;math>B X = X&lt;/math>, where &lt;math>B = B^T&lt;/math> and &lt;math>X&lt;/math> is &lt;math>n \times n&lt;/math>, rank=r matrix.
+
+==Thoughts==
+
+We can apply this on rank>1 matrices. What would the solution give us?
+
+Say we have rank such that this system is exactly defined. Oh, I guess in this case it would be an inconsistent system. Because if we multiply rank>1 matrix by a rank=1 matrix, we can't get rank>1 matrix back. Should also keep this in mind for the case with noise. Hmm. Need to somehow merge noisy ones together.
+
+==Equation counting==
+
+Initially, we have a system of &lt;math>n+1&lt;/math> homogeneous quadratic equations in &lt;math>n&lt;/math> unknowns.
+
+We then linearize this system by treating each product as a variable, &lt;math>r_i r_j = a_{i j}&lt;/math>, we have &lt;math>n+1&lt;/math> linear equations in
+&lt;math>\frac{n(n+1)}{2}&lt;/math> unknowns.
+
+We solve it so that we can express &lt;math>n+1&lt;/math> variables in terms of &lt;math>\frac{(n+1)(n-2)}{2}&lt;/math> variables. So, if &lt;math>n=2&lt;/math>, we are done.
+
+We are free to choose these &lt;math>n+1&lt;/math> variables. A natural choice seems to be: &lt;math>r_i^2&lt;/math>, and &lt;math>r_1 r_2&lt;/math>.
+
+So, we express these variables in terms of other variables, &lt;math>r_i r_j&lt;/math>, where &lt;math>i \not = j&lt;/math>, and where we don't have &lt;math>r_1 r_2&lt;/math>.
+
+The idea now is to multiply the known variables into all reasonable combinations of unknown variables, and their squares.
+
+Say we have an equation of the form &lt;math>a = bx + dy&lt;/math>. We would square it to get &lt;math>a^2 = b^2x^2 + d^2y^2 + bdxy&lt;/math>
+
+For example, we would multiply &lt;math>r_1^2&lt;/math> and &lt;math>r_3^2&lt;/math> because right hand side of that product would have &lt;math>r_1 r_3&lt;/math> and &lt;math>r_1^2 r_3^2&lt;/math>. Such operation would also eliminate monomials &lt;math>r_1^2&lt;/math> and &lt;math>r_2^2&lt;/math>.
+
+Now, let's count how many combinations we can get this way.
+
+===In terms of unknowns, we would have===
+
+In terms of number of linear variables, we get &lt;math>p + p + \frac{p(p-1)}{2} = \frac{p(p+3)}{2}&lt;/math> equations.
+
+In terms of original variables, this will be &lt;math>\frac{(n+1)(n-2)(n^2-n+4)}{8}&lt;/math> new variables.
+
+===In terms of equations, we would have===
+
+From the &lt;math>r_i^2 r_j^2&lt;/math> terms, we get &lt;math>\frac{(n-1)(n-2)}{2}&lt;/math> combinations.
+
+We now also multiply the &lt;math>r_1 r_2&lt;/math> by all the unknown terms &lt;math>r_i r_j&lt;/math>, but where &lt;math>i=1&lt;/math>, or &lt;math>j=2&lt;/math>. This allows us to use the following identities:
+
+* &lt;math>(r_1 r_2) (r_1 r_j) = (r_1^2) (r_2 r_j)&lt;/math>
+* &lt;math>(r_1 r_2) (r_i r_2) = (r_2^2) (r_1 r_i)&lt;/math>
+
+We can then replace &lt;math>(r_1 r_2)&lt;/math>, &lt;math>(r_1^2)&lt;/math>, and &lt;math>(r_2^2)&lt;/math> by some expressions written in terms of unknown variables. This will give us additional &lt;math>2 (n - 1)&lt;/math> variables.
+
+===Recursion===
+
+Notice that products &lt;math>r_i^2 r_j^2&lt;/math> and &lt;math>(r_1 r_2) (r_i r_j)&lt;/math> are made up from the following terms:
+
+* &lt;math>r_i r_j&lt;/math>
+* &lt;math>(r_i r_j)^2&lt;/math>
+* &lt;math>(r_i r_j) (r_k r_l)&lt;/math>
+
+And those terms are products of expressions that we already know. So, we can actually keep expanding these to generate even more equations. We can generate as many equations as we want!
+</textarea><div class="templatesUsed"></div><p id="mw-returnto">Return to <a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Ultimate ALS</a>.</p>
+</div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html">https://wiki.nya.pink/wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS</a>"</div>
+		
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="https://wiki.nya.pink/index.php?title=Special:UserLogin&amp;returnto=Research%3AImproving+Low-rank+Matrix+Completion+Algorithms+Using+Debiasing%2FUltimate+ALS&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://wiki.nya.pink/index.php?title=Talk:Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible"><span><a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html">Read</a></span></li><li id="ca-viewsource" class="collapsible selected"><span><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;action=edit.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;action=history.html" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://wiki.nya.pink/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Lab Journal Wiki" title="Search Lab Journal Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="robots.txt.html" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="robots.txt.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.nya.pink/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="wiki/Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="wiki/Special:WhatLinksHere/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.nya.pink/wiki/Special:RecentChangesLinked/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Ultimate_ALS" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="wiki/Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-info"><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FUltimate_ALS&amp;action=info.html" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:Privacy_policy" title="Lab Journal Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:About" title="Lab Journal Wiki:About">About Lab Journal Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:General_disclaimer" title="Lab Journal Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="resources/assets/poweredby_mediawiki_132x47.png 1.5x, resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":114});});</script>
+</body>
+</html>

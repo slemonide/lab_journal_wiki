@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Paper:Hastie 2014 Matrix Completion and Low-Rank SVD via Fast Alternating Least Squares - Lab Journal Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares","wgTitle":"Paper:Hastie 2014 Matrix Completion and Low-Rank SVD via Fast Alternating Least Squares","wgCurRevisionId":418,"wgRevisionId":418,"wgArticleId":55,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":!1,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":
+"Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares","wgRelevantArticleId":55,"wgRequestId":"3fa4b384b7868d70b141737d","wgCSPNonce":!1,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.smw.style","ext.smw.tooltips","ext.smw.table.styles","smw.factbox","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.scite.styles",
+"ext.scite.tooltip","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.math.styles|mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|mediawiki.toc.styles|skins.vector.styles&amp;only=styles&amp;skin=vector.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.scite.styles|ext.smw.style|ext.smw.tooltip.styles&amp;only=styles&amp;skin=vector.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.34.2"/>
+<link rel="alternate" type="application/rdf+xml" title="Paper:Hastie 2014 Matrix Completion and Low-Rank SVD via Fast Alternating Least Squares" href="../index.php%3Ftitle=Special:ExportRDF%252FPaper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Lab Journal Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../api.php%3Faction=rsd"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Paper_Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares rootpage-Paper_Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Paper:Hastie 2014 Matrix Completion and Low-Rank SVD via Fast Alternating Least Squares</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Lab Journal Wiki</div>
+		<div id="contentSub"></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Notes for paper "Matrix Completion and Low-Rank SVD via Fast Alternating Least Squares" by Trevor Hastie, Rahul Mazumder, Jason Lee, and Reza Zadeh.
+</p><p>arXiv: <a rel="nofollow" class="external free" href="https://arxiv.org/abs/1410.2596">https://arxiv.org/abs/1410.2596</a>
+</p><p>PDF: <a rel="nofollow" class="external free" href="https://jmlr.org/papers/volume16/hastie15a/hastie15a.pdf">https://jmlr.org/papers/volume16/hastie15a/hastie15a.pdf</a>
+</p><p>JMLR: <a rel="nofollow" class="external free" href="https://www.jmlr.org/papers/v16/hastie15a.html">https://www.jmlr.org/papers/v16/hastie15a.html</a>
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Abstract"><span class="tocnumber">1</span> <span class="toctext">Abstract</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Rank-restricted_Soft_SVD"><span class="tocnumber">3</span> <span class="toctext">Rank-restricted Soft SVD</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#The_softImpute-ALS_Algorithm"><span class="tocnumber">4</span> <span class="toctext">The <i>softImpute-ALS</i> Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Broader_Perspective_and_Related_Work"><span class="tocnumber">5</span> <span class="toctext">Broader Perspective and Related Work</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Algorithmic_Convergence_Analysis"><span class="tocnumber">6</span> <span class="toctext">Algorithmic Convergence Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#softImpute-ALS:_Rates_of_Convergence"><span class="tocnumber">6.1</span> <span class="toctext"><i>softImpute-ALS</i>: Rates of Convergence</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#softImpute-ALS:_Asymptotic_Convergence"><span class="tocnumber">6.2</span> <span class="toctext"><i>softImpute-ALS</i>: Asymptotic Convergence</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Implications_of_softImpute-ALS_updates_in_terms_of_Problem_.281.29"><span class="tocnumber">6.3</span> <span class="toctext">Implications of <i>softImpute-ALS</i> updates in terms of Problem (1)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Computational_Complexity_and_Comparison_to_ALS"><span class="tocnumber">6.4</span> <span class="toctext">Computational Complexity and Comparison to ALS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Experiments"><span class="tocnumber">7</span> <span class="toctext">Experiments</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Timing_experiments"><span class="tocnumber">7.1</span> <span class="toctext">Timing experiments</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Netflix_Competition_Data"><span class="tocnumber">7.2</span> <span class="toctext">Netflix Competition Data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#R_Package_softImpute"><span class="tocnumber">8</span> <span class="toctext">R Package <i>softImpute</i></span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Distributed_Implementation"><span class="tocnumber">9</span> <span class="toctext">Distributed Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Design"><span class="tocnumber">9.1</span> <span class="toctext">Design</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Experiments_2"><span class="tocnumber">9.2</span> <span class="toctext">Experiments</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Centering_and_Scaling"><span class="tocnumber">10</span> <span class="toctext">Centering and Scaling</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Method-of-moments_Algorithm"><span class="tocnumber">10.1</span> <span class="toctext">Method-of-moments Algorithm</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html#Discussion"><span class="tocnumber">11</span> <span class="toctext">Discussion</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Abstract">Abstract</span></h2>
+<p>TODO
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>TODO
+</p>
+<h2><span class="mw-headline" id="Rank-restricted_Soft_SVD">Rank-restricted Soft SVD</span></h2>
+<p>TODO
+</p>
+<h2><span class="mw-headline" id="The_softImpute-ALS_Algorithm">The <i>softImpute-ALS</i> Algorithm</span></h2>
+<p>TODO
+</p>
+<h2><span class="mw-headline" id="Broader_Perspective_and_Related_Work">Broader Perspective and Related Work</span></h2>
+<p>TODO
+</p>
+<h2><span class="mw-headline" id="Algorithmic_Convergence_Analysis">Algorithmic Convergence Analysis</span></h2>
+<h3><span class="mw-headline" id="softImpute-ALS:_Rates_of_Convergence"><i>softImpute-ALS</i>: Rates of Convergence</span></h3>
+<p>Note: 
+</p>
+<ul><li>(D) - means compatible with debiasing,</li>
+<li>(ND) - means not compatible with debiasing in the form stated,</li>
+<li>(?) - means unknown</li></ul>
+<p><b>Definition</b> (D):
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}\eta _{k}:=\Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1}){}&amp;:={\frac {1}{2}}(||(A_{k}-A_{k+1})B_{k}^{T}||_{F}^{2}+||A_{k+1}(B_{k+1}-B_{k})^{T}||_{F}^{2})\\&amp;+{\frac {\lambda }{2}}(||A_{k}-A_{k+1}||_{F}^{2}+||B_{k+1}-B_{k}||_{F}^{2})\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>&#x03B7;<!-- η --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mo>:=</mo>
+                <mi mathvariant="normal">&#x0394;<!-- Δ --></mi>
+                <mo stretchy="false">(</mo>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <mo>,</mo>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+
+                </mrow>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>:=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>2</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <msubsup>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>T</mi>
+                  </mrow>
+                </msubsup>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msubsup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>F</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>T</mi>
+                  </mrow>
+                </msup>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msubsup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>F</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>2</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msubsup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>F</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>B</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>k</mi>
+                  </mrow>
+                </msub>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msubsup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>F</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}\eta _{k}:=\Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1}){}&amp;:={\frac {1}{2}}(||(A_{k}-A_{k+1})B_{k}^{T}||_{F}^{2}+||A_{k+1}(B_{k+1}-B_{k})^{T}||_{F}^{2})\\&amp;+{\frac {\lambda }{2}}(||A_{k}-A_{k+1}||_{F}^{2}+||B_{k+1}-B_{k}||_{F}^{2})\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a04591c0baabc29e9cb2a0caeb67f0d46244f9fd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.517ex; margin-bottom: -0.321ex; width:84.711ex; height:10.843ex;" alt="{\displaystyle {\begin{aligned}\eta _{k}:=\Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1}){}&amp;:={\frac {1}{2}}(||(A_{k}-A_{k+1})B_{k}^{T}||_{F}^{2}+||A_{k+1}(B_{k+1}-B_{k})^{T}||_{F}^{2})\\&amp;+{\frac {\lambda }{2}}(||A_{k}-A_{k+1}||_{F}^{2}+||B_{k+1}-B_{k}||_{F}^{2})\end{aligned}}}"/></span></dd></dl>
+<p><br />
+<b>Lemma 2</b> (D): <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F(A_{k},B_{k})-F(A_{k+1},B_{k+1})\geq \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mi mathvariant="normal">&#x0394;<!-- Δ --></mi>
+        <mo stretchy="false">(</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F(A_{k},B_{k})-F(A_{k+1},B_{k+1})\geq \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d577e29bc02c4b8b8073207a061dfcd310da73b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:55.808ex; height:2.843ex;" alt="{\displaystyle F(A_{k},B_{k})-F(A_{k+1},B_{k+1})\geq \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})}"/></span>
+</p><p><b>Lemma 3</b> (D): <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})=0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x0394;<!-- Δ --></mi>
+        <mo stretchy="false">(</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/78f2579cd4bb55302f079f4c7669cde53179243a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:29.392ex; height:2.843ex;" alt="{\displaystyle \Delta ((A_{k},B_{k}),(A_{k+1},B_{k+1})=0}"/></span> iff <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A_{k},B_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A_{k},B_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47043344d7a5fe53fc8b620e458720874244e7d4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.719ex; height:2.509ex;" alt="{\displaystyle A_{k},B_{k}}"/></span> is a fixed point of <i>softImpute-ALS</i>.
+</p><p><b>Theorem 4</b> (D): The decreasing sequence of objective values <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F(A_{k},B_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F(A_{k},B_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3b65a978946c1aadf16aeccb0c37594a61df632a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.269ex; height:2.843ex;" alt="{\displaystyle F(A_{k},B_{k})}"/></span> converges to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F^{\infty }\geq 0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>F</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </msup>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F^{\infty }\geq 0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7b564642cfc19e4d2028400a2520bca9dc12920d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:7.951ex; height:2.509ex;" alt="{\displaystyle F^{\infty }\geq 0}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \eta _{k}\rightarrow 0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B7;<!-- η --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \eta _{k}\rightarrow 0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a46d0889e8ed02eba9f6cab8a097b22f0561deeb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.021ex; height:2.676ex;" alt="{\displaystyle \eta _{k}\rightarrow 0}"/></span>. Furthermore:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \min _{1\leq k\leq K}\eta _{k}\leq (F(A_{1},B_{1})-F^{\infty }))/K}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo movablelimits="true" form="prefix">min</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+            <mo>&#x2264;<!-- ≤ --></mo>
+            <mi>k</mi>
+            <mo>&#x2264;<!-- ≤ --></mo>
+            <mi>K</mi>
+          </mrow>
+        </munder>
+        <msub>
+          <mi>&#x03B7;<!-- η --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mi>F</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>K</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \min _{1\leq k\leq K}\eta _{k}\leq (F(A_{1},B_{1})-F^{\infty }))/K}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/30b2d10e9d7d711cb758864052ebc4f5d8b716c5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.171ex; width:34.099ex; height:4.176ex;" alt="{\displaystyle \min _{1\leq k\leq K}\eta _{k}\leq (F(A_{1},B_{1})-F^{\infty }))/K}"/></span>.</dd></dl>
+<p>In other words, for any <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon &gt;0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03F5;<!-- ϵ --></mi>
+        <mo>&gt;</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon &gt;0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/568095ad3924314374a5ab68fae17343661f2a71" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.205ex; height:2.176ex;" alt="{\displaystyle \epsilon &gt;0}"/></span>, we need at most <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K=O({\frac {1}{\epsilon }})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+        <mo>=</mo>
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>&#x03F5;<!-- ϵ --></mi>
+          </mfrac>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K=O({\frac {1}{\epsilon }})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a927384cdf1f1ad2a87d9a7a4111ac14e3199fdc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:10.746ex; height:5.176ex;" alt="{\displaystyle K=O({\frac {1}{\epsilon }})}"/></span> iterations to arrive at a point <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (A_{k^{*}},B_{k^{*}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mi>k</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2217;<!-- ∗ --></mo>
+              </mrow>
+            </msup>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mi>k</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2217;<!-- ∗ --></mo>
+              </mrow>
+            </msup>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (A_{k^{*}},B_{k^{*}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c1240c2771ecfbd4d1ea5e2eda80f9d6c43d334a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.191ex; height:2.843ex;" alt="{\displaystyle (A_{k^{*}},B_{k^{*}})}"/></span> such that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \eta _{k^{*}}\leq \epsilon }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B7;<!-- η --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mi>k</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2217;<!-- ∗ --></mo>
+              </mrow>
+            </msup>
+          </mrow>
+        </msub>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>&#x03F5;<!-- ϵ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \eta _{k^{*}}\leq \epsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/805d1b0b05d31d33401b8bfd75b56d444ec076d3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.118ex; height:2.509ex;" alt="{\displaystyle \eta _{k^{*}}\leq \epsilon }"/></span>, where, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1\leq k^{*}\leq K}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <msup>
+          <mi>k</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2217;<!-- ∗ --></mo>
+          </mrow>
+        </msup>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>K</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1\leq k^{*}\leq K}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/903f6f6d7ac35a628909806be603952d3a4277a0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:11.691ex; height:2.509ex;" alt="{\displaystyle 1\leq k^{*}\leq K}"/></span>.
+</p>
+<div id="corollary_1">
+<p><b>Corollary 1</b> (?): Assume that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ell ^{U}\mathbf {I} \succeq B^{T}B\succeq \ell ^{L}\mathbf {I} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>U</mi>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">I</mi>
+        </mrow>
+        <mo>&#x2AB0;<!-- ⪰ --></mo>
+        <msup>
+          <mi>B</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msup>
+        <mi>B</mi>
+        <mo>&#x2AB0;<!-- ⪰ --></mo>
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">I</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ell ^{U}\mathbf {I} \succeq B^{T}B\succeq \ell ^{L}\mathbf {I} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81e2e4b3aee34c7f725ba1352549a539e4ae5081" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:17.925ex; height:2.843ex;" alt="{\displaystyle \ell ^{U}\mathbf {I} \succeq B^{T}B\succeq \ell ^{L}\mathbf {I} }"/></span> and 
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ell ^{U}\mathbf {I} \succeq A^{T}A\succeq \ell ^{L}\mathbf {I} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>U</mi>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">I</mi>
+        </mrow>
+        <mo>&#x2AB0;<!-- ⪰ --></mo>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msup>
+        <mi>A</mi>
+        <mo>&#x2AB0;<!-- ⪰ --></mo>
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="bold">I</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ell ^{U}\mathbf {I} \succeq A^{T}A\succeq \ell ^{L}\mathbf {I} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/448d2eedcf9f2200c9bba0b335b0960ae26dc6fa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:17.884ex; height:2.843ex;" alt="{\displaystyle \ell ^{U}\mathbf {I} \succeq A^{T}A\succeq \ell ^{L}\mathbf {I} }"/></span>. Where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ell ^{U}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>U</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ell ^{U}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6afbcce315f027b165883188a861d40266a774cd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.462ex; height:2.676ex;" alt="{\displaystyle \ell ^{U}}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ell ^{L}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>&#x2113;<!-- ℓ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ell ^{L}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ffa4d14585bd562139b505b9c5aa88258d8a87e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.321ex; height:2.676ex;" alt="{\displaystyle \ell ^{L}}"/></span> are constants independent of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle k}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>k</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.211ex; height:2.176ex;" alt="{\displaystyle k}"/></span>. Then we have the following: <b>TODO</b>
+</p>
+</div>
+<h3><span class="mw-headline" id="softImpute-ALS:_Asymptotic_Convergence"><i>softImpute-ALS</i>: Asymptotic Convergence</span></h3>
+<h3><span id="Implications_of_softImpute-ALS_updates_in_terms_of_Problem_(1)"></span><span class="mw-headline" id="Implications_of_softImpute-ALS_updates_in_terms_of_Problem_.281.29">Implications of <i>softImpute-ALS</i> updates in terms of Problem (1)</span></h3>
+<h3><span class="mw-headline" id="Computational_Complexity_and_Comparison_to_ALS">Computational Complexity and Comparison to ALS</span></h3>
+<h2><span class="mw-headline" id="Experiments">Experiments</span></h2>
+<h3><span class="mw-headline" id="Timing_experiments">Timing experiments</span></h3>
+<h3><span class="mw-headline" id="Netflix_Competition_Data">Netflix Competition Data</span></h3>
+<h2><span class="mw-headline" id="R_Package_softImpute">R Package <i>softImpute</i></span></h2>
+<h2><span class="mw-headline" id="Distributed_Implementation">Distributed Implementation</span></h2>
+<h3><span class="mw-headline" id="Design">Design</span></h3>
+<h3><span class="mw-headline" id="Experiments_2">Experiments</span></h3>
+<h2><span class="mw-headline" id="Centering_and_Scaling">Centering and Scaling</span></h2>
+<h3><span class="mw-headline" id="Method-of-moments_Algorithm">Method-of-moments Algorithm</span></h3>
+<h2><span class="mw-headline" id="Discussion">Discussion</span></h2>
+<!-- 
+NewPP limit report
+Cached time: 20201215164748
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.165 seconds
+Real time usage: 0.422 seconds
+Preprocessor visited node count: 151/1000000
+Preprocessor generated node count: 0/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 648/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:55-0!canonical!math=5 and timestamp 20201215164747 and revision id 418
+ -->
+</div></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;oldid=418.html">https://wiki.nya.pink/index.php?title=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;oldid=418</a>"</div>
+		
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="../index.php%3Ftitle=Special:UserLogin&amp;returnto=Paper:Hastie+2014+Matrix+Completion+and+Low-Rank+SVD+via+Fast+Alternating+Least+Squares.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://wiki.nya.pink/index.php?title=Talk:Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="./Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;action=edit.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;action=history.html" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://wiki.nya.pink/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Lab Journal Wiki" title="Search Lab Journal Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="../robots.txt.html" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="../robots.txt.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.nya.pink/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="./Special:WhatLinksHere/Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.nya.pink/wiki/Special:RecentChangesLinked/Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;printable=yes.html" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;oldid=418.html" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="../index.php%3Ftitle=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;action=info.html" title="More information about this page">Page information</a></li><li id="t-cite"><a href="../index.php%3Ftitle=Special:CiteThisPage&amp;page=Paper:Hastie_2014_Matrix_Completion_and_Low-Rank_SVD_via_Fast_Alternating_Least_Squares&amp;id=418.html" title="Information on how to cite this page">Cite this page</a></li><li id="t-smwbrowselink"><a href="./Special:Browse/:Paper:Hastie-5F2014-5FMatrix-5FCompletion-5Fand-5FLow-2DRank-5FSVD-5Fvia-5FFast-5FAlternating-5FLeast-5FSquares.html" rel="search">Browse properties</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 19 August 2020, at 02:48.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:Privacy_policy" title="Lab Journal Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:About" title="Lab Journal Wiki:About">About Lab Journal Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:General_disclaimer" title="Lab Journal Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="../resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="../resources/assets/poweredby_mediawiki_132x47.png 1.5x, ../resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.165","walltime":"0.422","ppvisitednodes":{"value":151,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":648,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20201215164748","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":551});});</script>
+</body>
+</html>

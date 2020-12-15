@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF[
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY swivt 'http://semantic-mediawiki.org/swivt/1.0#'>
+	<!ENTITY wiki 'http://wiki.nya.pink/wiki/Special:URIResolver/'>
+	<!ENTITY category 'http://wiki.nya.pink/wiki/Special:URIResolver/Category-3A'>
+	<!ENTITY property 'http://wiki.nya.pink/wiki/Special:URIResolver/Property-3A'>
+	<!ENTITY wikiurl 'https://wiki.nya.pink/wiki/'>
+]>
+
+<rdf:RDF
+	xmlns:rdf="&rdf;"
+	xmlns:rdfs="&rdfs;"
+	xmlns:owl ="&owl;"
+	xmlns:swivt="&swivt;"
+	xmlns:wiki="&wiki;"
+	xmlns:category="&category;"
+	xmlns:property="&property;">
+
+	<owl:Ontology rdf:about="https://wiki.nya.pink/wiki/Special:ExportRDF/Category-3AMatrix_completion">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-15T17:00:13+00:00</swivt:creationDate>
+		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
+	</owl:Ontology>
+	<owl:Class rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion">
+		<rdfs:label>Matrix completion</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Category-3AMatrix_completion"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Category-3AMatrix_completion"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-17T00:02:54Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2459078.5020139</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matrix completion</swivt:wikiPageSortKey>
+		<rdfs:subClassOf rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_theory"/>
+	</owl:Class>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Paper:Hardt 2013 Understanding Alternating Minimization for Matrix Completion</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper:Hardt 2013 Understanding Alternating Minimization for Matrix Completion</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Paper:Jain 2012 Low-rank Matrix Completion using Alternating Minimization</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper:Jain 2012 Low-rank Matrix Completion using Alternating Minimization</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Paper:Hardt 2013 Understanding Alternating Minimization for Matrix Completion</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Paper-3AHardt_2013_Understanding_Alternating_Minimization_for_Matrix_Completion"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper:Hardt 2013 Understanding Alternating Minimization for Matrix Completion</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Paper:Jain 2012 Low-rank Matrix Completion using Alternating Minimization</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Paper-3AJain_2012_Low-2Drank_Matrix_Completion_using_Alternating_Minimization"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper:Jain 2012 Low-rank Matrix Completion using Alternating Minimization</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing">
+		<rdf:type rdf:resource="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_completion"/>
+		<rdfs:label>Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://wiki.nya.pink/wiki/Special:ExportRDF/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing"/>
+		<swivt:page rdf:resource="https://wiki.nya.pink/wiki/Research-3AImproving_Low-2Drank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-2DALS_debiasing"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
+	<owl:DatatypeProperty rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
+	<owl:Class rdf:about="http://wiki.nya.pink/wiki/Special:URIResolver/Category-3AMatrix_theory" />
+	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
+</rdf:RDF>

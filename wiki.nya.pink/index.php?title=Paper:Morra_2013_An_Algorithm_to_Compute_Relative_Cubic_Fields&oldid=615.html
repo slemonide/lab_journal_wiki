@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields - Lab Journal Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields","wgTitle":"Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields","wgCurRevisionId":615,"wgRevisionId":615,"wgArticleId":67,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":!1,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields","wgRelevantArticleId":67,"wgRequestId":
+"2d2c5c30c2ec665f160fe89a","wgCSPNonce":!1,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","jquery.makeCollapsible.styles":"ready","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.smw.style","ext.smw.tooltips","ext.smw.table.styles","smw.factbox","site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.searchSuggest","ext.scite.styles","ext.scite.tooltip","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=ext.math.styles|ext.pygments|jquery.makeCollapsible.styles|mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|skins.vector.styles&amp;only=styles&amp;skin=vector.css"/>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=ext.scite.styles|ext.smw.style|ext.smw.tooltip.styles&amp;only=styles&amp;skin=vector.css"/>
+<script async="" src="load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.34.2"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields" href="./index.php%3Ftitle=Special:ExportRDF%252FPaper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Lab Journal Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api.php%3Faction=rsd"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Paper_Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields rootpage-Paper_Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Lab Journal Wiki</div>
+		<div id="contentSub"><div class="mw-revision warningbox"><div id="mw-revision-info">Revision as of 13:23, 7 September 2020 by <a href="wiki/User:Comsno.html" class="mw-userlink" title="User:Comsno"><bdi>Comsno</bdi></a> <span class="mw-usertoollinks">(<a href="wiki/User_talk:Comsno.html" class="mw-usertoollinks-talk" title="User talk:Comsno">talk</a> | <a href="wiki/Special:Contributions/Comsno.html" class="mw-usertoollinks-contribs" title="Special:Contributions/Comsno">contribs</a>)</span></div><div id="mw-revision-nav">(<a href="https://wiki.nya.pink/index.php?title=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;diff=prev&amp;oldid=615" title="Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields">diff</a>) <a href="https://wiki.nya.pink/index.php?title=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;direction=prev&amp;oldid=615" title="Paper:Morra 2013 An Algorithm to Compute Relative Cubic Fields">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615.html#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615.html#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>PDF: <a rel="nofollow" class="external free" href="https://arxiv.org/pdf/1103.2901.pdf">https://arxiv.org/pdf/1103.2901.pdf</a>
+</p><p>This paper describes two notions of reduction for binary cubic forms: Julia reduction and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \tau }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C4;<!-- τ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \tau }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38a7dcde9730ef0853809fefc18d88771f95206c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.202ex; height:1.676ex;" alt="{\displaystyle \tau }"/></span>-reduction. Julia reduction depends on the theory of reduced hermitian forms. If <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>F</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/545fd099af8541605f7ee55f08225526be88ce57" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.741ex; height:2.176ex;" alt="{\displaystyle F}"/></span> is Julia-reduced, then its <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \tau }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C4;<!-- τ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \tau }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38a7dcde9730ef0853809fefc18d88771f95206c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.202ex; height:1.676ex;" alt="{\displaystyle \tau }"/></span>-reduced form carries additional interesting properties.
+</p><p><b>Corollary 2.3.</b> If <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b76fce82a62ed5461908f0dc8f037de4e3686b0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.066ex; height:2.176ex;" alt="{\displaystyle K}"/></span> is a class 1 number field with integer ring <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {O}}:={\mathcal {O}}_{K}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mo>:=</mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>K</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {O}}:={\mathcal {O}}_{K}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/321e994a324dd6b062d855abdcb4c01e389212d6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:9.138ex; height:2.509ex;" alt="{\displaystyle {\mathcal {O}}:={\mathcal {O}}_{K}}"/></span>, then Taniguchi's bijection simplifies to a bijection between
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{binary cubic forms with coefficients in }}{\mathcal {O}}{\bmod {G}}L_{2}({\mathcal {O}})\iff {\text{cubic }}{\mathcal {O}}{\text{-algebras}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>binary cubic forms with coefficients in&#xA0;</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo lspace="thickmathspace" rspace="thickmathspace">mod</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>G</mi>
+          </mrow>
+        </mrow>
+        <msub>
+          <mi>L</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mspace width="thickmathspace" />
+        <mo stretchy="false">&#x27FA;<!-- ⟺ --></mo>
+        <mspace width="thickmathspace" />
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>cubic&#xA0;</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>-algebras</mtext>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{binary cubic forms with coefficients in }}{\mathcal {O}}{\bmod {G}}L_{2}({\mathcal {O}})\iff {\text{cubic }}{\mathcal {O}}{\text{-algebras}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d334871eb6e9bfa0e77968b549df2672e11d2e34" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:77.877ex; height:2.843ex;" alt="{\displaystyle {\text{binary cubic forms with coefficients in }}{\mathcal {O}}{\bmod {G}}L_{2}({\mathcal {O}})\iff {\text{cubic }}{\mathcal {O}}{\text{-algebras}}}"/></span></dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Fundamental_domains_in_hyperbolic_3-space">Fundamental domains in hyperbolic 3-space</span></h3>
+<p>Fundamental domains for the action of Bianchi groups on hyperbolic 3-space.
+</p>
+<h3><span id="Julia's_covariant"></span><span class="mw-headline" id="Julia.27s_covariant">Julia's covariant</span></h3>
+<p>Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b76fce82a62ed5461908f0dc8f037de4e3686b0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.066ex; height:2.176ex;" alt="{\displaystyle K}"/></span> be an imaginary quadratic field, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {O}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {O}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d6ae2ed4058fb748a183d9ada8aea50a00d0c89f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.85ex; height:2.176ex;" alt="{\displaystyle {\mathcal {O}}}"/></span> its ring of integers, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle V_{\mathcal {O}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>V</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+            </mrow>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle V_{\mathcal {O}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/709786629f1f29fab85ab8493c5bc33379972820" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.896ex; height:2.509ex;" alt="{\displaystyle V_{\mathcal {O}}}"/></span> be the set of binary cubic forms in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {O}}[x,y]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {O}}[x,y]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a839e9a7e869f978c882d743537e86ee7d224922" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.663ex; height:2.843ex;" alt="{\displaystyle {\mathcal {O}}[x,y]}"/></span>.
+</p><p><b>Definition 2.11.</b> Consider
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F(x,y)=ax^{3}+bx^{2}y+cxy^{2}+dy^{2},\quad a,b,c,d\in {\mathcal {O}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>a</mi>
+        <msup>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>b</mi>
+        <msup>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mi>y</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mi>x</mi>
+        <msup>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>d</mi>
+        <msup>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mi>a</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo>,</mo>
+        <mi>c</mi>
+        <mo>,</mo>
+        <mi>d</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F(x,y)=ax^{3}+bx^{2}y+cxy^{2}+dy^{2},\quad a,b,c,d\in {\mathcal {O}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d9bd2a73e17939f1ea96be82cd314761891cd10d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:50.42ex; height:3.176ex;" alt="{\displaystyle F(x,y)=ax^{3}+bx^{2}y+cxy^{2}+dy^{2},\quad a,b,c,d\in {\mathcal {O}}}"/></span></dd></dl>
+<p>modulo the action of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle GL_{2}({\mathcal {O}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+        <msub>
+          <mi>L</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle GL_{2}({\mathcal {O}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dd5e06f432b7252e9f2fd06f4bbe8a7cecd9de98" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.123ex; height:2.843ex;" alt="{\displaystyle GL_{2}({\mathcal {O}})}"/></span> given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle M\times F=(det(M))^{-1}F(Ax+By,Cx+Dy),\quad M={\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}}\in GL_{2}({\mathcal {O}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>F</mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>d</mi>
+        <mi>e</mi>
+        <mi>t</mi>
+        <mo stretchy="false">(</mo>
+        <mi>M</mi>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>A</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>B</mi>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>C</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>D</mi>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mi>M</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>(</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mi>A</mi>
+                </mtd>
+                <mtd>
+                  <mi>B</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>C</mi>
+                </mtd>
+                <mtd>
+                  <mi>D</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>G</mi>
+        <msub>
+          <mi>L</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M\times F=(det(M))^{-1}F(Ax+By,Cx+Dy),\quad M={\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}}\in GL_{2}({\mathcal {O}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b164be81c08a387cbd17525f60f5f2be43674483" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:74.134ex; height:6.176ex;" alt="{\displaystyle M\times F=(det(M))^{-1}F(Ax+By,Cx+Dy),\quad M={\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}}\in GL_{2}({\mathcal {O}})}"/></span></dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Implementation_of_Algorithm_3.7">Implementation of Algorithm 3.7</span></h3>
+<ul><li>We compute possible values for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/693ad9f934775838bd72406b41ada4a59785d7ba" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.284ex; height:2.009ex;" alt="{\displaystyle a_{0}}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>c</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1882ba8f1dc60f0c68a642abb5af093c73910921" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.061ex; height:2.009ex;" alt="{\displaystyle c_{0}}"/></span> using a function called <code>get_int_within</code> that currently loops over a rectangle and puts the valid integers into an array. But actually we could loop over an ellipse and skip the checking part.</li>
+<li>Morra says that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {O}}/3a_{0}{\mathcal {O}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>3</mn>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {O}}/3a_{0}{\mathcal {O}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a2c977ba22993be0c4997022fde91a5f7496adbe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.309ex; height:2.843ex;" alt="{\displaystyle {\mathcal {O}}/3a_{0}{\mathcal {O}}}"/></span> contains <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 9|a_{0}|^{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>9</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 9|a_{0}|^{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2978e39f6ae06ed5bbc166348a818c889b126b02" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.794ex; height:3.343ex;" alt="{\displaystyle 9|a_{0}|^{2}}"/></span> elements. At least for the case where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle -D\neq 1{\bmod {4}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>D</mi>
+        <mo>&#x2260;<!-- ≠ --></mo>
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo lspace="thickmathspace" rspace="thickmathspace">mod</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle -D\neq 1{\bmod {4}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff46872676469ffcee4d5d684802c9fbc04a05eb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.837ex; height:2.676ex;" alt="{\displaystyle -D\neq 1{\bmod {4}}}"/></span>, the integers are of the form <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x+y{\sqrt {-D}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>y</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>D</mi>
+          </msqrt>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x+y{\sqrt {-D}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/98f1d7137c7d23c341a570e9749f3863baf5dc81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.994ex; height:3.009ex;" alt="{\displaystyle x+y{\sqrt {-D}}}"/></span> so if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{0}:=x_{0}+y_{0}{\sqrt {-D}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>:=</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>D</mi>
+          </msqrt>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{0}:=x_{0}+y_{0}{\sqrt {-D}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fdb0c689ee4a14bd8fd202831f321eead3b363da" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.115ex; height:3.009ex;" alt="{\displaystyle a_{0}:=x_{0}+y_{0}{\sqrt {-D}}}"/></span>, then I believe there should be <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 9|x_{0}||y_{0}|}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>9</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 9|x_{0}||y_{0}|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9b15d58b092cbf11d36bf64c647181bca1d955f7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.327ex; height:2.843ex;" alt="{\displaystyle 9|x_{0}||y_{0}|}"/></span> elements (???)</li>
+<li>Computing the integers that satisfy <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |d_{0}-x|\leq R}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <msub>
+          <mi>d</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>x</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>R</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |d_{0}-x|\leq R}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4cc94b73754f58b107ff858335938c9a89d03343" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.589ex; height:2.843ex;" alt="{\displaystyle |d_{0}-x|\leq R}"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="{\displaystyle x}"/></span> is an arbitrary and possibly annoying complex number, is annoying... maybe in C++ we don't have to worry excessively about redundancy and just compute all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |d_{0}-x'|\leq R+\epsilon }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <msub>
+          <mi>d</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mi>x</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>R</mi>
+        <mo>+</mo>
+        <mi>&#x03F5;<!-- ϵ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |d_{0}-x'|\leq R+\epsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af3a71e240c47259a6ae16874adb074f469a0b53" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:17.059ex; height:3.009ex;" alt="{\displaystyle |d_{0}-x&#039;|\leq R+\epsilon }"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x'}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>x</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x'}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ac74959896052e160a5953102e4bc3850fe93b2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.014ex; height:2.509ex;" alt="{\displaystyle x&#039;}"/></span> is the nearest integer and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon &gt;0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03F5;<!-- ϵ --></mi>
+        <mo>&gt;</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon &gt;0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/568095ad3924314374a5ab68fae17343661f2a71" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.205ex; height:2.176ex;" alt="{\displaystyle \epsilon &gt;0}"/></span> is some constant and then just filter out the ones that don't satisfy the bound. Determine <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03F5;<!-- ϵ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3837cad72483d97bcdde49c85d3b7b859fb3fd2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:0.944ex; height:1.676ex;" alt="{\displaystyle \epsilon }"/></span> to make sure that all potential <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle d_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>d</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle d_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4740381c16ea98c4132510daa642e93c1e42c049" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.263ex; height:2.509ex;" alt="{\displaystyle d_{0}}"/></span> are accounted for (think of the triangle inequality)</li></ul>
+<table class="mw-collapsible mw-collapsed" style="width:100%; margin:auto; clear:both; padding:1px; border:1px solid #c0c0c0; background:#fff; float:none">
+<tbody><tr>
+<th colspan="0" style="padding-left:1em; padding-right:.4em; text-align:center; background-color:#f0f2f5; font-size:88%; color:#000000;">Code for algorithm, currently broken and unfinished
+</th></tr>
+<tr>
+<td style="text-align:left; font-size:88%;">
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cln/cln.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cln/io.h&gt;</span><span class="cp"></span>
+<span class="c1">// #include &lt;ginac/ginac.h&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cln</span><span class="p">;</span>
+<span class="c1">// using namespace GiNaC;</span>
+<span class="c1">//</span>
+<span class="cp">#include</span> <span class="cpf">&quot;dk.cc&quot;</span><span class="cp"></span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">D</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// (note: -2 is NOT 1 mod 4)</span>
+
+<span class="k">const</span> <span class="kt">double</span> <span class="n">tK_sq</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="n">c_H</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="mf">3.0</span> <span class="o">/</span> <span class="n">tK_sq</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="n">pow</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span>
+
+<span class="k">class</span> <span class="nc">IntegerRingElement</span> <span class="p">{</span>
+  <span class="k">friend</span> <span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">+</span> <span class="p">(</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span> <span class="p">);</span>
+  <span class="k">friend</span> <span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">*</span> <span class="p">(</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span> <span class="p">);</span>
+  <span class="k">friend</span> <span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">-</span> <span class="p">(</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span> <span class="p">);</span>
+  <span class="k">friend</span> <span class="n">IntegerRingElement</span> <span class="nf">pow</span> <span class="p">(</span> <span class="k">const</span> <span class="n">IntegerRingElement</span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="p">);</span>
+  <span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">IntegerRingElement</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+
+  <span class="k">private</span><span class="o">:</span>
+
+  <span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+
+    <span class="n">IntegerRingElement</span><span class="p">(</span><span class="kt">int</span> <span class="n">a0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">norm</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">D</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span> <span class="p">}</span>
+
+    <span class="n">cl_N</span> <span class="n">to_complex</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">complex</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">cl_N</span> <span class="n">to_high_prec_complex</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">complex</span> <span class="p">(</span>
+           <span class="n">cl_float</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">5000</span><span class="p">)),</span>
+           <span class="n">cl_float</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">5000</span><span class="p">))</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">+</span> <span class="p">(</span><span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">y</span><span class="p">.</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">y</span><span class="p">.</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">*</span> <span class="p">(</span><span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">y</span><span class="p">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">x</span><span class="p">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">y</span><span class="p">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">D</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">y</span><span class="p">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">x</span><span class="p">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">y</span><span class="p">.</span><span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">IntegerRingElement</span> <span class="k">operator</span> <span class="o">-</span> <span class="p">(</span><span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">IntegerRingElement</span> <span class="n">pow</span> <span class="p">(</span><span class="n">IntegerRingElement</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="k">const</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">IntegerRingElement</span> <span class="n">prod</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="n">prod</span> <span class="o">=</span> <span class="n">prod</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">return</span> <span class="n">prod</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+    <span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">IntegerRingElement</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">a</span><span class="p">;</span>
+      <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; + w*&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">b</span><span class="p">;</span>
+      <span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="c1">// generate all integers within a certain absolute value</span>
+<span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">get_ints_within</span> <span class="p">(</span><span class="kt">double</span> <span class="n">R</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">max_size</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">ceil</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+  <span class="c1">// IntegerRingElement ints[max_size];</span>
+
+  <span class="n">IntegerRingElement</span> <span class="o">*</span> <span class="n">ints</span> <span class="o">=</span> <span class="p">(</span><span class="n">IntegerRingElement</span><span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span> <span class="p">(</span><span class="n">IntegerRingElement</span><span class="p">)</span> <span class="o">*</span> <span class="n">max_size</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">-</span><span class="n">D</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">R</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// all nonzero integers on x-axis</span>
+      <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+      <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">R</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">D</span><span class="p">);</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">D</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">pow</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
+          <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+          <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+          <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+          <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">R</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">D</span><span class="p">);</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// all nonzero integers on y-axis</span>
+      <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+      <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">ints</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">ints</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// generate all representations of O / 3a_0 O which is a</span>
+<span class="c1">// finite set with 9|a0|^2 elements</span>
+<span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">get_reps</span> <span class="p">(</span><span class="n">IntegerRingElement</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">max_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="n">IntegerRingElement</span> <span class="o">*</span> <span class="n">ints</span> <span class="o">=</span> <span class="p">(</span><span class="n">IntegerRingElement</span><span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span> <span class="p">(</span><span class="n">IntegerRingElement</span><span class="p">)</span> <span class="o">*</span> <span class="n">max_size</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">a</span><span class="p">);</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">b</span><span class="p">);</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">ints</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">ints</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="c1">// Rounds a complex number to its nearest integer</span>
+<span class="c1">// so that their difference is in the fundamental domain.</span>
+<span class="n">IntegerRingElement</span> <span class="n">nearest</span><span class="p">(</span><span class="n">cl_N</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">IntegerRingElement</span><span class="p">(</span>
+      <span class="n">cl_I_to_int</span><span class="p">(</span><span class="n">round1</span><span class="p">(</span><span class="n">realpart</span><span class="p">(</span><span class="n">z</span><span class="p">))),</span>
+      <span class="n">cl_I_to_int</span><span class="p">(</span><span class="n">round1</span><span class="p">(</span><span class="n">imagpart</span><span class="p">(</span><span class="n">z</span><span class="p">)))</span>
+  <span class="p">);</span>
+
+  <span class="c1">// write the other cases!!!!!!!!!!</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">IntegerRingElement</span> <span class="n">x</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+  <span class="n">IntegerRingElement</span> <span class="n">y</span> <span class="o">=</span> <span class="n">IntegerRingElement</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+
+  <span class="kt">double</span> <span class="n">X</span> <span class="o">=</span> <span class="mf">10000.0</span><span class="p">;</span>
+
+  <span class="kt">double</span> <span class="n">a_bound</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">)</span> <span class="o">/</span> <span class="n">pow</span><span class="p">(</span><span class="n">tK_sq</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
+
+  <span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">a_vals</span> <span class="o">=</span> <span class="n">get_ints_within</span><span class="p">(</span><span class="n">a_bound</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">a_vals</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">IntegerRingElement</span> <span class="n">a0</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">a_vals</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">b_vals</span> <span class="o">=</span> <span class="n">get_reps</span><span class="p">(</span><span class="n">a0</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">b_vals</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">IntegerRingElement</span> <span class="n">b0</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">b_vals</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">a0</span><span class="p">.</span><span class="n">norm</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">c_bound</span> <span class="o">=</span> <span class="p">(</span><span class="n">b0</span><span class="p">.</span><span class="n">norm</span><span class="p">()</span> <span class="o">+</span> <span class="n">c_H</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a0</span><span class="p">.</span><span class="n">norm</span><span class="p">()));</span>
+
+        <span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">c_vals</span> <span class="o">=</span> <span class="n">get_ints_within</span><span class="p">(</span><span class="n">c_bound</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">c_vals</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">IntegerRingElement</span> <span class="n">c0</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">c_vals</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+          <span class="n">cl_N</span> <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">27</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">a0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)).</span><span class="n">to_complex</span><span class="p">();</span>
+          <span class="n">cl_N</span> <span class="n">B</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span> <span class="o">*</span> <span class="n">a0</span> <span class="o">*</span> <span class="n">b0</span> <span class="o">*</span> <span class="n">c0</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">b0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)).</span><span class="n">to_complex</span><span class="p">();</span>
+          <span class="n">cl_N</span> <span class="n">C</span> <span class="o">=</span> <span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">b0</span> <span class="o">*</span> <span class="n">c0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a0</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)).</span><span class="n">to_complex</span><span class="p">();</span>
+
+          <span class="n">cl_N</span> <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">B</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">expt</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">C</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="p">);</span>
+          <span class="n">cl_N</span> <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">B</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">expt</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">C</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="p">);</span>
+
+          <span class="n">cl_R</span> <span class="n">d_bound</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">A</span><span class="p">));</span>
+          <span class="c1">// cout &lt;&lt; &quot;d_bound = &quot; &lt;&lt; d_bound &lt;&lt; endl;</span>
+          <span class="c1">//</span>
+          <span class="n">pair</span><span class="o">&lt;</span><span class="n">IntegerRingElement</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">d_vals</span> <span class="o">=</span> <span class="n">get_ints_within</span><span class="p">(</span><span class="n">double_approx</span><span class="p">(</span><span class="n">d_bound</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+
+
+          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">d_vals</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">IntegerRingElement</span> <span class="n">d0</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">d_vals</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="n">nearest</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span>
+            <span class="n">IntegerRingElement</span> <span class="n">d1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">d_vals</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="n">nearest</span><span class="p">(</span><span class="n">x2</span><span class="p">);</span>
+
+            <span class="c1">// check if bounds actually apply ?</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">d0</span><span class="p">.</span><span class="n">to_complex</span><span class="p">()</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">d_bound</span><span class="p">)</span> <span class="p">{</span>
+              <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(a0,b0,c0,d0) = (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">a0</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">b0</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">c0</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">d0</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+              <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">d0</span><span class="p">.</span><span class="n">to_high_prec_complex</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+              <span class="n">calculate_roots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+              <span class="c1">// Compute P_0, Q_0 of H_{F_0}</span>
+        <span class="c1">//      IntegerRingElement </span>
+        
+
+              <span class="c1">// Compute k s.t. z_0 + k \in P_k</span>
+
+              <span class="c1">// Compute F = (a,b,c,d)</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table>
+<table class="mw-collapsible mw-collapsed" style="width:100%; margin:auto; clear:both; padding:1px; border:1px solid #c0c0c0; background:#fff; float:none">
+<tbody><tr>
+<th colspan="0" style="padding-left:1em; padding-right:.4em; text-align:center; background-color:#f0f2f5; font-size:88%; color:#000000;">Code for computing roots of cubic equations with high precision, based on durand-kerner algorithm
+</th></tr>
+<tr>
+<td style="text-align:left; font-size:88%;">
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;tuple&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cln/cln.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cln/io.h&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cln</span><span class="p">;</span>
+
+<span class="n">string</span> <span class="n">precision</span> <span class="o">=</span> <span class="s">&quot;_10000&quot;</span><span class="p">;</span>
+<span class="n">cl_R</span> <span class="n">eps</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;1.0e-5000&quot;</span> <span class="o">+</span> <span class="n">precision</span><span class="p">).</span><span class="n">c_str</span><span class="p">();</span>
+
+<span class="c1">// cl_N a = (&quot;-3.2&quot; + precision).c_str();</span>
+<span class="c1">// cl_N b = (&quot;-12.6&quot; + precision).c_str();</span>
+<span class="c1">// cl_N c = (&quot;18.0&quot; + precision).c_str();</span>
+
+<span class="n">cl_N</span> <span class="nf">f</span> <span class="p">(</span><span class="n">cl_N</span> <span class="n">a</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">b</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">c</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">d</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">expt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">expt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">tuple</span><span class="o">&lt;</span><span class="n">cl_N</span><span class="p">,</span> <span class="n">cl_N</span><span class="p">,</span> <span class="n">cl_N</span><span class="o">&gt;</span> <span class="n">calculate_roots</span><span class="p">(</span><span class="n">cl_N</span> <span class="n">a</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">b</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">c</span><span class="p">,</span> <span class="n">cl_N</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// complex number that is neither real, nor a root of unity.</span>
+  <span class="n">cl_N</span> <span class="n">z</span> <span class="o">=</span> <span class="n">complex</span><span class="p">(</span>
+      <span class="p">(</span><span class="s">&quot;0.4&quot;</span> <span class="o">+</span> <span class="n">precision</span><span class="p">).</span><span class="n">c_str</span><span class="p">(),</span>
+      <span class="p">(</span><span class="s">&quot;0.9&quot;</span> <span class="o">+</span> <span class="n">precision</span><span class="p">).</span><span class="n">c_str</span><span class="p">()</span>
+    <span class="p">);</span>
+
+  <span class="c1">// Initial guesses for roots of polynomial f    </span>
+  <span class="n">cl_N</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">cl_N</span> <span class="n">q</span> <span class="o">=</span> <span class="n">z</span><span class="p">;</span>
+  <span class="n">cl_N</span> <span class="n">r</span> <span class="o">=</span> <span class="n">expt</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">p</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">)</span> <span class="o">||</span>
+    <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">q</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">)</span> <span class="o">||</span>
+    <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">r</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">)</span>
+  <span class="p">)</span> <span class="p">{</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">p</span><span class="o">-</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="n">r</span><span class="p">));</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">q</span><span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="n">r</span><span class="p">));</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">r</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">r</span><span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">q</span><span class="p">));</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;p = &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">realpart</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="s">&quot; + i * &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">imagpart</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;q = &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">realpart</span><span class="p">(</span><span class="n">q</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="s">&quot; + i * &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">imagpart</span><span class="p">(</span><span class="n">q</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;r = &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">realpart</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="s">&quot; + i * &quot;</span>
+       <span class="o">&lt;&lt;</span> <span class="n">cl_float</span><span class="p">(</span><span class="n">imagpart</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">float_format</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+       <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nf">make_tuple</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table>
+<style data-mw-deduplicate="TemplateStyles:r486">.mw-parser-output .divbox{padding:1em;margin:0.5em}.mw-parser-output .divbox .divbox-heading{width:auto;margin-left:auto;margin-right:auto;font-weight:bold;text-align:center}.mw-parser-output .divbox-amber{background-color:#ffffcc;border:1px solid #663300}.mw-parser-output .divbox-berk{background-color:#b78727;border:1px solid #0f4d92}.mw-parser-output .divbox-black{background-color:black;border:1px solid white;color:white;font-weight:bold}.mw-parser-output .divbox-bloodred{background-color:#ff3333;border:1px solid #cc0000;font-weight:bold}.mw-parser-output .divbox-blue{background-color:#dee;border:1px solid #0000cc}.mw-parser-output .divbox-brown{background-color:#f2deb8;border:1px solid #663300}.mw-parser-output .divbox-darkgreen{background-color:#006a4d;color:#ffffff;border:4px solid #ffffff;border-radius:5em;box-shadow:0.1em 0.1em 0.5em rgba(0,0,0,0.75)}.mw-parser-output .divbox-docgreen{background-color:#ecfcf4;border:1px solid #aaaaaa}.mw-parser-output .divbox-double{background-color:inherit;border:1px double #000000;letter-spacing:0.5em}.mw-parser-output .divbox-email{font-weight:bold;margin-left:2em;border:black solid 1px;border-style:dotted solid dotted solid;background:palegreen}.mw-parser-output .divbox-fawn{border:1px solid #cd853f;background-color:#fff8dc;border-radius:10px}.mw-parser-output .divbox-forest{background-color:#b5dbaf;border:1px solid #006633}.mw-parser-output .divbox-gold{background-color:#cc0;border:1px solid #f00}.mw-parser-output .divbox-gray,.mw-parser-output .divbox-grey{background-color:#eeeeee;border:1px solid #999999}.mw-parser-output .divbox-gray99,.mw-parser-output .divbox-grey99{background-color:#f9f9f9;border:1px solid #dddddd}.mw-parser-output .divbox-grayh,.mw-parser-output .divbox-greyh{background:transparent;border:solid 4px lightgray;border-left:none;border-right:none;color:gray}.mw-parser-output .divbox-green{background-color:#ccffcc;border:1px solid #009900}.mw-parser-output .divbox-greenv{background:transparent;border:solid 8px lightgreen;border-top:none;border-bottom:none}.mw-parser-output .divbox-ivory{border:1px solid #0000ff;background-color:#fffff0;border-radius:10px}.mw-parser-output .divbox-lavender{background-color:#e6e6fa;font-size:11pt;border:1px solid #7d00b3}.mw-parser-output .divbox-lightblue{background-color:#f0f8ff;border:1px solid #7cb9e8}.mw-parser-output .divbox-lilac{background-color:#c8a2c8;border:1px solid silver}.mw-parser-output .divbox-n{border:7px solid #0ff0ff;background-color:#f0fff0;border-radius:25px}.mw-parser-output .divbox-navy{background-color:#aadbe0;border:1px solid #00477b}.mw-parser-output .divbox-none{border:1px hidden}.mw-parser-output .divbox-nyanza{background-color:#e9ffdb;font-size:11pt;border:1px solid #7d00b3}.mw-parser-output .divbox-orange{background-color:#ffdeb5;border:1px solid #ff6600}.mw-parser-output .divbox-plain{background-color:inherit;border:1px solid #000000}.mw-parser-output .divbox-purple{background-color:#ffdaff;border:1px solid #7d00b3}.mw-parser-output .divbox-red{background-color:#ffcccc;border:1px solid #cc0000}.mw-parser-output .divbox-sia{background-color:#cccccc;border:1px solid #6881b9}.mw-parser-output .divbox-siaaa{background-color:#d5dceb;border:1px solid #6881b9}.mw-parser-output .divbox-simar{background-color:#f2deb8;border:4px solid #810541;border-radius:5em}.mw-parser-output .divbox-teal{background-color:#008080;border:1px solid #40e0d0}.mw-parser-output .divbox-thistle{background-color:#d8bfd8;font-size:11pt;border:1px solid #7d00b3}.mw-parser-output .divbox-tt{background-color:transparent;color:darkblue;border:1px solid grey}.mw-parser-output .divbox-wdl{background-color:#cee3f6;border:1px solid #cee3f6}.mw-parser-output .divbox-white{background-color:#ffffff;border:1px solid #000000}.mw-parser-output .divbox-wordperfect{background-color:blue;color:white;border:1px solid #0000cc}.mw-parser-output .divbox-email,.mw-parser-output .divbox-tt,.mw-parser-output .divbox-wordperfect{font-family:monospace,monospace}.mw-parser-output .divbox-yellow{background-color:#ffffcc;border:1px solid #ffcc00}</style>
+<div class="metadata divbox divbox-orange"><div class="divbox-heading"></div>So, you are using arbitrary precision arithmetic here (the CLN library). Have you considered instead doing this symbolically? You can get infinite precision this way! If you are worried that your functions would look bad, consider writing them in terms of their Taylor series. It should be possible to encode infinite sums symbolically.</div>
+<!-- 
+NewPP limit report
+Cached time: 20201215164618
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.002 seconds
+CPU time usage: 0.508 seconds
+Real time usage: 1.348 seconds
+Preprocessor visited node count: 201/1000000
+Preprocessor generated node count: 0/1000000
+Post‐expand include size: 1398/2097152 bytes
+Template argument size: 582/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 54335/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  752.338      1 -total
+ 84.94%  639.051      2 Template:Collapse
+ 14.98%  112.730      1 Template:Divbox
+-->
+
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:67-0!canonical!math=5 and timestamp 20201215164616 and revision id 615
+ -->
+</div></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615.html">https://wiki.nya.pink/index.php?title=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615</a>"</div>
+		
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="https://wiki.nya.pink/index.php?title=Special:UserLogin&amp;returnto=Paper%3AMorra+2013+An+Algorithm+to+Compute+Relative+Cubic+Fields&amp;returntoquery=oldid%3D615" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="wiki/Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields.html" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="wiki/Talk:Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="wiki/Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields.html">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;action=edit.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;action=history.html" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://wiki.nya.pink/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Lab Journal Wiki" title="Search Lab Journal Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="robots.txt.html" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="robots.txt.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.nya.pink/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="wiki/Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="wiki/Special:WhatLinksHere/Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.nya.pink/wiki/Special:RecentChangesLinked/Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="wiki/Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.nya.pink/index.php?title=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;oldid=615.html" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="./index.php%3Ftitle=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;action=info.html" title="More information about this page">Page information</a></li><li id="t-cite"><a href="./index.php%3Ftitle=Special:CiteThisPage&amp;page=Paper:Morra_2013_An_Algorithm_to_Compute_Relative_Cubic_Fields&amp;id=615.html" title="Information on how to cite this page">Cite this page</a></li><li id="t-smwbrowselink"><a href="wiki/Special:Browse/:Paper:Morra-5F2013-5FAn-5FAlgorithm-5Fto-5FCompute-5FRelative-5FCubic-5FFields.html" rel="search">Browse properties</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 15 December 2020, at 16:50.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:Privacy_policy" title="Lab Journal Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:About" title="Lab Journal Wiki:About">About Lab Journal Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:General_disclaimer" title="Lab Journal Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="resources/assets/poweredby_mediawiki_132x47.png 1.5x, resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.002},"limitreport":{"cputime":"0.508","walltime":"1.348","ppvisitednodes":{"value":201,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1000000},"postexpandincludesize":{"value":1398,"limit":2097152},"templateargumentsize":{"value":582,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":54335,"limit":5000000},"timingprofile":["100.00%  752.338      1 -total"," 84.94%  639.051      2 Template:Collapse"," 14.98%  112.730      1 Template:Divbox"]},"cachereport":{"timestamp":"20201215164618","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":110});});</script>
+</body>
+</html>

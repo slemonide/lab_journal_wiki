@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>View source for Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof - Lab Journal Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof","wgTitle":"Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof","wgCurRevisionId":581,"wgRevisionId":0,"wgArticleId":97,"wgIsArticle":!1,"wgIsRedirect":!1,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":!0,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun"
+,"Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof","wgRelevantArticleId":97,"wgRequestId":"cc380203edd888c09373b0fa","wgCSPNonce":!1,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","ext.scite.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["ext.smw.style","ext.smw.table.styles","smw.factbox","mediawiki.action.edit.collapsibleFooter","site","mediawiki.page.startup",
+"mediawiki.page.ready","mediawiki.searchSuggest","ext.scite.styles","ext.scite.tooltip","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=ext.scite.styles|ext.smw.style|ext.smw.tooltip.styles&amp;only=styles&amp;skin=vector.css"/>
+<link rel="stylesheet" href="load.php%3Flang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|skins.vector.styles&amp;only=styles&amp;skin=vector.css"/>
+<script async="" src="load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.34.2"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof" href="./index.php%3Ftitle=Special:ExportRDF%252FResearch:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Lab Journal Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api.php%3Faction=rsd"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Research_Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing_Hastie_2014_softImpute-ALS_debiasing_Debiased_Algorithm_Outline_of_a_proof rootpage-Research_Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing skin-vector action-edit">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">View source for Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		
+		<div id="contentSub">← <a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof</a></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;action=edit.html#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;action=edit.html#p-search">Jump to search</a>
+		<div id="mw-content-text"><p>You do not have permission to edit this page, for the following reason:
+</p>
+<div class="permissions-errors">
+<p>The action you have requested is limited to users in the group: <a href="https://wiki.nya.pink/index.php?title=Lab_Journal_Wiki:Users&amp;action=edit&amp;redlink=1" class="new" title="Lab Journal Wiki:Users (page does not exist)">Users</a>.
+</p>
+</div><hr />
+<p>You can view and copy the source of this page.
+</p><textarea readonly="" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" class="mw-editfont-monospace" lang="en" dir="ltr" name="wpTextbox1">We try to solve a convex optimization problem &lt;xr id="eq:convex-sing-val-min" /> by instead looking for a solution for a non-convex optimization problem &lt;xr id="eq:non-convex-frob-min" />. It turns out that these two problems actually have the same solution, as is shown in Hastie et al.'s paper.
+
+:&lt;equation id="eq:convex-sing-val-min" shownumber>
+&lt;math>
+\begin{aligned}
+&amp; \underset{M}{\text{minimize}}
+&amp; &amp; H(M) := \frac{1}{2}||P_\Omega(X-M)|_{F}^2 + \lambda ||M||_*
+\end{aligned}
+\quad
+\text{(convex)}
+&lt;/math>
+&lt;/equation>
+
+:&lt;equation id="eq:non-convex-frob-min" shownumber>
+&lt;math>
+\begin{aligned}
+&amp; \underset{A,B}{\text{minimize}}
+&amp; &amp; F(A,B) := \frac{1}{2}||P_\Omega(X-AB^T)||_{F}^2 + \frac{\lambda}{2}||A||_{F}^2 + \frac{\lambda}{2}||B||_{F}^2
+\end{aligned}
+\quad
+\text{(non-convex)}
+&lt;/math>
+&lt;/equation>
+
+To try to get a solution for the same problem, we iteratively freeze one of the variables, and solve for the other one (since in this case, the problem becomes convex at each iteration).
+
+But we don't solve it directly. Instead we define surrogate functions and optimize them instead:
+
+:&lt;equation id="eq:Q_A_def_deb" shownumber>
+&lt;math>
+Q_A^*(Z_1|A,B) := \frac{1}{2}||P_\Omega(X-Z_1B^T)+P_\Omega^\bot(AB^T-Z_1B^T)\circ\frac{1}{K}||_F^2 + \frac{\lambda}{2}||Z_1||_F^2 + \frac{\lambda}{2}||B||_F^2
+&lt;/math>
+&lt;/equation>
+
+:&lt;equation id="eq:Q_B_def_deb" shownumber>
+&lt;math>
+Q_B^*(Z_2|A,B) := \frac{1}{2}||P_\Omega(X-AZ_2^T)+P_\Omega^\bot(AB^T-AZ_2^T)\circ\frac{1}{K}||_F^2 + \frac{\lambda}{2}||A||_F^2 + \frac{\lambda}{2}||Z_2||_F^2
+&lt;/math>
+&lt;/equation>
+
+These surrogate functions have important properties:
+* &lt;equation id="eq:first-property-of-surrogate-functions" shownumber> &lt;math>Q_A^*(Z_1|A,B) \geq F(Z_1,B)&lt;/math>, and &lt;math>Q_B^*(Z_2|A,B) \geq F(A,Z_2)&lt;/math> &lt;/equation>
+* &lt;math>Q_A^*(A|A,B)=F(A,B)&lt;/math>, and &lt;math>Q_B^*(B|A,B) = F(A,B)&lt;/math>
+
+To compute minimizers &lt;math>Z_1^*&lt;/math> and &lt;math>Z_2^*&lt;/math> for these surrogate functions, we construct them row by row, where each row is computed as:
+
+[[File:Alternating least squares single step derivation debiasing hastie result.svg]]
+
+===Convergence===
+
+* &lt;math>
+\eta_k := \frac{1}{2}(||(A_k - A_{k+1})B_k^T||_F^2 +||A_{k+1}(B_{k+1} - B_k)^T||_F^2)
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+* &lt;math>
+F(A_k,B_k) - F(A_{k+1}, B_{k+1}) \geq \eta_k
+&lt;/math>
+* &lt;math>\eta_k = 0&lt;/math> iff &lt;math>A_k,B_k&lt;/math> is a fixed point
+
+* The decreasing sequence of objective values &lt;math>F(A_k,B_k)&lt;/math> converges to &lt;math>F^\infty \geq 0&lt;/math> and &lt;math>\eta_k \rightarrow 0&lt;/math>. Furthermore:
+:&lt;math>\min_{1 \leq k \leq K} \eta_k \leq (F(A_1,B_1)-F^\infty))/K&lt;/math>. In other words, for any &lt;math>\epsilon > 0&lt;/math>, we need at most &lt;math>K = O(\frac{1}{\epsilon})&lt;/math> iterations to arrive at a point &lt;math>(A_{k^*}, B_{k^*})&lt;/math> such that &lt;math>\eta_{k^*} \leq \epsilon&lt;/math>, where, &lt;math>1 \leq k^* \leq K&lt;/math>.
+
+TODO: I am not sure about &lt;math>\eta_k&lt;/math>. Need to check.
+
+===Derivation of &lt;math>\eta_k&lt;/math>===
+
+# &lt;math>F(A_k,B_k) = Q_A^*(A_k|A_k,B_k)&lt;/math>.
+# &lt;math>F(A_{k+1},B_k) \leq Q_A^*(A_{k+1}|A_k,B_k)&lt;/math>, since the second one simply has some squared terms added here and there.
+# &lt;math>A_{k+1} = \text{argmin}_{Z} Q_A^*(Z|A_k,B_k)&lt;/math>. In particular, this means that first derivative of &lt;math>Q_A^*(Z|A_k,B_k)&lt;/math> with respect to &lt;math>Z&lt;/math> is zero.
+
+Now, to proceed we simply need to compute second derivative of &lt;math>Q_A^*(Z|A_k,B_k)&lt;/math> with respect to &lt;math>Z&lt;/math>. Notice that &lt;math>Q_A^*(Z|A_k,B_k)&lt;/math> is a quadratic function in &lt;math>Z&lt;/math>, so it can be expressed exactly as Taylor series with three terms (where the second term, corresponding to first derivative, will be zero at &lt;math>A_{k+1}&lt;/math>).
+
+The surrogate function (in absolute notation) is:
+:&lt;math>
+Q_A^*(Z|A,B) =
+\frac{1}{2}||X^* - (P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K})||_F^2
++ \frac{\lambda}{2}||Z||_F^2
++ \frac{\lambda}{2}||B||_F^2
+&lt;/math>
+
+{{collapse|
+We can express it in index notation as:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}(X^* - (P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K}))_{ij}
+(X^* - (P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K}))^{ij} \\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
+\end{align}
+&lt;/math>
+
+Simplify:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}(P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K})_{ij}
+(P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K})^{ij} \\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}(P_\Omega(ZB^T)+P_\Omega^\bot(ZB^T)\circ\frac{1}{K})^{ij}
+\end{align}
+&lt;/math>
+
+Simplify:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}((ZB^T)_{ij}\Omega_{ij}+(ZB^T)_{ij}\Omega^\bot_{ij}\frac{1}{K_{ij}})
+((ZB^T)^{ij}\Omega^{ij}+(ZB^T)^{ij}(\Omega^\bot)^{ij}\frac{1}{K^{ij}}) \\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}((ZB^T)^{ij}\Omega^{ij}+(ZB^T)^{ij}(\Omega^\bot)^{ij}\frac{1}{K^{ij}})
+\end{align}
+&lt;/math>
+
+Since &lt;math>\Omega_{ij}(\Omega^\bot)^{ij} = \Omega^\bot_{ij}\Omega^{ij} = 0&lt;/math>, we have:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}(ZB^T)_{ij}\Omega_{ij}(ZB^T)^{ij}\Omega^{ij} + 
+\frac{1}{2}(ZB^T)_{ij}\Omega^\bot_{ij}\frac{1}{K_{ij}}(ZB^T)^{ij}(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}((ZB^T)^{ij}\Omega^{ij}+(ZB^T)^{ij}(\Omega^\bot)^{ij}\frac{1}{K^{ij}})
+\end{align}
+&lt;/math>
+
+Now, &lt;math>(ZB^T)_{ij} = {Z_i}^k{B^T}_{kj}&lt;/math> and &lt;math>(ZB^T)^{ij} = Z^{ik}{{B^T}_{k}}^j&lt;/math>, thus:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij} \\ {} &amp;
++ 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega^\bot_{ij}\frac{1}{K_{ij}}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}(Z^{ik}{{B^T}_{k}}^j\Omega^{ij}+Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}})
+\end{align}
+&lt;/math>
+
+We can further expand the cross term:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij} \\ {} &amp;
++ 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega^\bot_{ij}\frac{1}{K_{ij}}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij}
+- X^*_{ij}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\end{align}
+&lt;/math>
+
+|Derivation of simple form in index notation
+|expand=no
+}}
+
+{{collapse|
+Surrogate function in index notation is:
+:&lt;math>
+\begin{align}
+Q_A^*(Z|A,B) {} &amp; = 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij} \\ {} &amp;
++ 
+\frac{1}{2}{Z_i}^k{B^T}_{kj}\Omega^\bot_{ij}\frac{1}{K_{ij}}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\\ {} &amp;
++ \frac{\lambda}{2}Z_{ij}Z^{ij}
++ \frac{\lambda}{2}B_{ij}B^{ij}
++ \frac{1}{2}X^*_{ij}X^{*ij}
+\\ {} &amp;
+- X^*_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij}
+- X^*_{ij}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\end{align}
+&lt;/math>
+
+Lets differentiate it:
+:&lt;math>
+\begin{align}
+\frac{\partial Q_A^*(Z|A,B)}{\partial Z_{ab}} {} &amp; = 
+  \delta_a^i\delta^b_k{B^T}_{kj}\Omega_{ij}Z^{ik}{{B^T}_{k}}^j\Omega^{ij}
+\\ {} &amp;
++
+\delta_a^i\delta^b_k{B^T}_{kj}\Omega^\bot_{ij}\frac{1}{K_{ij}}Z^{ik}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\\ {} &amp;
++ \lambda Z_{ab}
+\\ {} &amp;
+- \delta_i^a\delta_k^b X^*_{ij}{{B^T}_{k}}^j\Omega^{ij}
+- \delta_i^a\delta_k^b X^*_{ij}{{B^T}_{k}}^j(\Omega^\bot)^{ij}\frac{1}{K^{ij}}
+\end{align}
+&lt;/math>
+
+Multiply the Kronecker deltas through:
+:&lt;math>
+\begin{align}
+\frac{\partial Q_A^*(Z|A,B)}{\partial Z_{ab}} {} &amp; = 
+  {{B^T}^b}_j {\Omega^a}_j Z_{ab} {B^T}^{bj} {\Omega_a}^j
+\\ {} &amp;
++
+{{B^T}^b}_j {(\Omega^\bot)^a}_j \frac{1}{{K^a}_j} Z_{ab}{B^T}^{bj} {(\Omega^\bot)_a}^j \frac{1}{{K_a}^j}
+\\ {} &amp;
++ \lambda Z_{ab}
+\\ {} &amp;
+- X^*_{aj}{{B^T}_{b}}^j\Omega^{aj}
+- X^*_{aj}{{B^T}_{b}}^j(\Omega^\bot)^{aj}\frac{1}{K^{aj}}
+\end{align}
+&lt;/math>
+
+Let's compute second derivatives:
+:&lt;math>
+\frac{\partial^2 Q_A^*(Z|A,B)}{\partial Z_{xy} \partial Z_{ab}} = \delta_{xa}\delta_{yb}(
+ {{B^T}^b}_j {\Omega^a}_j {B^T}^{bj} {\Omega_a}^j
++ {{B^T}^b}_j {(\Omega^\bot)^a}_j \frac{1}{{K^a}_j} {B^T}^{bj} {(\Omega^\bot)_a}^j \frac{1}{{K_a}^j}
++ \lambda)
+&lt;/math>
+
+Now, &lt;math>Q_A^*(Z|A_k,B_k)&lt;/math> is a quadratic function, so we have an exact expression using a second order Taylor Series:
+:&lt;math>
+Q_A^*(A_{k+1}|A_k,B_k) = 
+Q_A^*(A_k|A_k,B_k)
++ \frac{\partial Q_A^*(A_{k+1}|A,B)}{\partial Z_{ab}} (A_{k+1} - A_k)^{ab}
++ \frac{1}{2}\frac{\partial^2 Q_A^*(Z|A,B)}{\partial Z_{xy} \partial Z_{ab}} (A_{k+1} - A_k)^{xy} (A_{k+1} - A_k)^{ab}
+&lt;/math>
+
+Since &lt;math>A_{k+1}&lt;/math> is an extrema of &lt;math>Q_A^*(Z|A_k,B_k)&lt;/math>, second derivative vanishes and we are left with:
+:&lt;math>
+Q_A^*(A_{k+1}|A_k,B_k) - Q_A^*(A_k|A_k,B_k) = 
+\frac{1}{2}\frac{\partial^2 Q_A^*(Z|A,B)}{\partial Z_{xy} \partial Z_{ab}} (A_{k+1} - A_k)^{xy} (A_{k+1} - A_k)^{ab}
+&lt;/math>
+
+Now plug in the second derivative:
+:&lt;math>
+Q_A^*(A_{k+1}|A_k,B_k) - Q_A^*(A_k|A_k,B_k) = 
+\frac{1}{2}({{B^T}^b}_j {\Omega^a}_j {B^T}^{bj} {\Omega_a}^j
++ {{B^T}^b}_j {(\Omega^\bot)^a}_j \frac{1}{{K^a}_j} {B^T}^{bj} {(\Omega^\bot)_a}^j \frac{1}{{K_a}^j}) (A_{k+1} - A_k)_{ab} (A_{k+1} - A_k)^{ab}
+
++ \frac{\lambda}{2} ||A_{k+1} - A_k||_F^2
+&lt;/math>
+
+Let's play with it:
+* &lt;math>(A_{k+1} - A_k)_{ab}{{B^T}^b}_j = ((A_{k+1} - A_k)B^T)_{aj}&lt;/math>
+* &lt;math>((A_{k+1} - A_k)B^T)_{aj}{B^T}^{bj} = ((A_{k+1} - A_k)B^T)_{aj}{B}^{jb} = {((A_{k+1} - A_k)B^TB)_{a}}^{b}&lt;/math>
+
+Well, essentially the main idea here is that each row of &lt;math>(A_{k+1} - A_k)&lt;/math> gets its own &lt;math>B&lt;/math>:
+
+:&lt;math>
+Q_A^*(A_{k+1}|A_k,B_k) - Q_A^*(A_k|A_k,B_k) = 
+\frac{1}{2} \sum_{a \in \text{rows(A)}} ||(A_{k+1}-A_k)_aB^T_a||_F^2
++ \frac{\lambda}{2} ||A_{k+1} - A_k||_F^2
+&lt;/math>
+
+In words: We sum over rows of &lt;math>A&lt;/math>. For each row, we have a corresponding &lt;math>B_a&lt;/math> matrix, which is basically &lt;math>B&lt;/math> weighted for unknown entries by the debiaser.
+
+|Derivation of &lt;math>\eta_k&lt;/math>
+|expand=no
+}}
+
+From this, we get:
+:&lt;math>F(A_k,B_k) - F(A_{k+1},B_k) \geq
+Q_A^*(A_k|A_k,B_k) - Q_A^*(A_{k+1}|A_k,B_k) = 
+\frac{1}{2} \sum_{a \in \text{rows(A)}} ||(A_{k+1}-A_k)_aB^T_a||_F^2
++ \frac{\lambda}{2} ||A_{k+1} - A_k||_F^2
+&lt;/math>
+
+And, doing the same for &lt;math>B&lt;/math>:
+:&lt;math>F(A_k,B_k) - F(A_{k+1},B_{k+1}) \geq
+ \frac{1}{2}(\sum_{a \in \text{rows(A)}}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 +\sum_{a \in \text{rows(B)}}||{A_{k+1}}_a(B_{k+1} - B_k)^T_a||_F^2)
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+From this we get that:
+:&lt;math>\eta_k =  \frac{1}{2}(\sum_{a \in \text{rows(A)}}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 +\sum_{a \in \text{rows(B)}}||{A_{k+1}}_a(B_{k+1} - B_k)^T_a||_F^2)
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+===Rates of convergence (AKA Corollary 1)===
+
+Now that we have an accurate expression for &lt;math>\eta_k&lt;/math>, we can go on with studying rates of convergence.
+
+Ok, first of all, lets assume that &lt;math>u \mathbf{I} \succeq B^TB \succeq l \mathbf{I}&lt;/math> and 
+&lt;math>u \mathbf{I} \succeq A^TA \succeq l \mathbf{I}&lt;/math>. Where &lt;math>u&lt;/math> and &lt;math>l&lt;/math> are constants independent of &lt;math>k&lt;/math>.
+
+For simplicity, lets study rank 1 case first. In this case, &lt;math>u \geq B^TB \geq l&lt;/math> and &lt;math>u \geq A^TA \geq l&lt;/math>.
+
+In this case, rows of &lt;math>A&lt;/math> and &lt;math>B&lt;/math> will be just scalars.
+
+Ok, lets partition &lt;math>A&lt;/math> (or &lt;math>B&lt;/math>) into measured (a) and unknown (b) entries:
+:&lt;math>
+\begin{bmatrix}
+a &amp; | &amp; b
+\end{bmatrix}
+&lt;/math>
+
+
+Then, say &lt;math>A^TA = a^Ta + b^Tb&lt;/math> and &lt;math>{A^*}^TA^* = a^Ta + (b\circ \frac{1}{K_a}))^T(b\circ \frac{1}{K_a})&lt;/math>. Re-write in index notation:
+:&lt;math>{A^*}^TA^* = a^Ta + b_i b^i \frac{1}{{K_a}_i^2}&lt;/math>
+
+Now, subtract non-debiased quantity from the debiased one:
+:&lt;math>
+{A^*}^TA^* - A^TA = b_i b^i (\frac{1}{{K_a}_i^2} - 1)
+&lt;/math>
+
+Now, let's suppose that debiaser is a scalar quantity:
+:&lt;math>{A^*}^TA^* = a^Ta + b_i b^i \frac{1}{{K_a}^2}&lt;/math>
+
+And:
+:&lt;math>
+{A^*}^TA^* - A^TA = b^T b (\frac{1}{{K_a}^2} - 1)
+&lt;/math>
+
+Oh, yes. Also, in rank one case, &lt;math>u = B^TB = l&lt;/math> and &lt;math>u = A^TA = l&lt;/math> since we are dealing with scalars. So we might as well set &lt;math>u=l=p&lt;/math>.
+
+We can then say that there is some optimal value for &lt;math>p&lt;/math>, which we would call &lt;math>p_d&lt;/math>.
+
+We would call the non-debiased &lt;math>p&lt;/math> as &lt;math>p_o&lt;/math>, and debiased one as &lt;math>p_d&lt;/math>.
+
+TODO: Do an experiment to determine optimal value of scalar debiaser in rank-1 case empirically to know what to look for theoretically.
+
+
+===Debiasing===
+
+Let's revisit
+:&lt;math>F(A_k,B_k) - F(A_{k+1},B_{k+1}) \geq
+ \frac{1}{2}(\sum_{a \in \text{rows(A)}}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 +\sum_{a \in \text{rows(B)}}||{A_{k+1}}_a(B_{k+1} - B_k)^T_a||_F^2)
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+We can think of both left and right side as random variables which depend on the sampling density. Suppose we have a uniform sampling density.
+
+Since these are random variables, we can compute means:
+Let's revisit
+:&lt;math>\mathbb{E}(F(A_k,B_k) - F(A_{k+1},B_{k+1})) \geq
+ \frac{1}{2}\mathbb{E}(\sum_{a \in \text{rows(A)}}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 +\sum_{a \in \text{rows(B)}}||{A_{k+1}}_a(B_{k+1} - B_k)^T_a||_F^2)
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+There's no error: second term on the right hand side is constant with respect to sampling density.
+
+Now, to continue, we need to compute &lt;math>\mathbb{E}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2&lt;/math>.
+In rank=1 case, &lt;math>(A_k - A_{k+1})&lt;/math> is just a scalar, and &lt;math>{B_k^T}_a&lt;/math> is a vector.
+
+We then have:
+:&lt;math>||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 =
+\sum_{i,a \text{ measured}} [(A_k - A_{k+1})^i B^T_{ki}]^2 + 
+\sum_{i,a \text{ not measured}} [(A_k - A_{k+1})^i B^T_{ki}\frac{1}{k}]^2
+&lt;/math>
+
+If we have uniform probability, an we measure with probability &lt;math>p&lt;/math>, and don't measure with probability &lt;math>1-p&lt;/math>, we have:
+:&lt;math>\mathbb{E}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 =
+\sum_{i} [(A_k - A_{k+1})^i B^T_{ki}]^2 * p + 
+\sum_{i} [(A_k - A_{k+1})^i B^T_{ki}]^2 * \frac{(1-p)}{k^2}
+&lt;/math>
+
+Or:
+:&lt;math>\mathbb{E}||(A_k - A_{k+1})_a {B_k^T}_a||_F^2 =
+\sum_{i} [(A_k - A_{k+1})^i B^T_{ki}]^2  * (p + \frac{(1-p)}{k^2})
+&lt;/math>
+
+Plug this back in the original expression to get:
+:&lt;math>\mathbb{E}(F(A_k,B_k) - F(A_{k+1},B_{k+1})) \geq
+ \frac{1}{2}(||(A_k - A_{k+1}) {B_k^T}||_F^2 +||{A_{k+1}}(B_{k+1} - B_k)^T||_F^2) * (p + \frac{(1-p)}{k^2})
++ \frac{\lambda}{2}(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+Now, on the average, we want left hand side to be zero (i.e. each iteration, we on the average get the correct result). That's why it's called debiasing in the first place.
+
+If we hope for the left hand side to be zero, right hand side should also be zero:
+:&lt;math>
+0 = (||(A_k - A_{k+1}) {B_k^T}||_F^2 +||{A_{k+1}}(B_{k+1} - B_k)^T||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+&lt;/math>
+
+Now we can use the assumption that &lt;math>u \mathbf{I} \succeq B^TB \succeq l \mathbf{I}&lt;/math> and 
+&lt;math>u \mathbf{I} \succeq A^TA \succeq l \mathbf{I}&lt;/math> to move matrix multiplications outside norms:
+:&lt;math>
+\begin{align}
+u(||A_k - A_{k+1}||_F^2 +||B_{k+1} - B_k||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+\geq \\
+(||(A_k - A_{k+1}) {B_k^T}||_F^2 +||{A_{k+1}}(B_{k+1} - B_k)^T||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+\\ \geq
+l(||A_k - A_{k+1}||_F^2 +||B_{k+1} - B_k||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+\end{align}
+&lt;/math>
+
+In the rank=1 case, &lt;math>l=u=t&lt;/math>, and we get:
+:&lt;math>
+\begin{align}
+(||(A_k - A_{k+1}) {B_k^T}||_F^2 +||{A_{k+1}}(B_{k+1} - B_k)^T||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2) = \\
+t(||A_k - A_{k+1}||_F^2 +||B_{k+1} - B_k||_F^2) * (p + \frac{(1-p)}{k^2})
++ \lambda(||A_k - A_{k+1}||_F^2 + ||B_{k+1} - B_k||_F^2)
+\end{align}
+&lt;/math>
+
+From this, we get that:
+:&lt;math>
+t(p + \frac{(1-p)}{k^2}) + \lambda = 0
+&lt;/math>
+
+And thus:
+&lt;math>
+k^2 = -\frac{1-p}{\frac{\lambda}{t}+p} =
+-t\frac{1-p}{\lambda + pt}
+&lt;/math>
+
+The case &lt;math>\frac{\lambda}{t} \to 0&lt;/math> is especially interesting, since expression simplifies to &lt;math>k = -\frac{1-p}{p}&lt;/math>, and there is no dependence on iterates or regularization parameter at all.
+
+Note: it actually doesn't make sense for the mean to be zero. Instead it will be a small positive number, say &lt;math>\epsilon&lt;/math>, and we would get:
+:&lt;math>
+k^2 = \frac{1-p}{\frac{\epsilon - \lambda}{t}-p}
+&lt;/math>
+
+This is actually a more sensible value for a debiaser as now its squared value doesn't have to be negative. All we need for that is &lt;math>\frac{\epsilon - \lambda}{t}-p > 0&lt;/math>, or:
+:&lt;math>\frac{\epsilon - \lambda}{t} > p&lt;/math>
+
+Since the mean is roughly proportional to &lt;math>t&lt;/math>, this should hold true in practice.
+
+====Discussion====
+
+* This probably also carries on to rank>1 case easily.
+* Can extend to non-uniform probability by having a separate p for every row of A and B. But need to re-derive expression for those cases.
+* Can further analyze convergence rate, using Corollary 1
+* Lambda is independent of the dimensionality of the problem, right? In this case, &lt;math>\frac{\lambda}{t} \to 0&lt;/math> for any large problems  as t depends on the size of the problem.
+* Can we reformulate Corollary 1 in probabilistic fashion? I.e. we could be able to estimate the unknown bounding parameters on eigenvalues by treating matrices as random variables.
+* At the very least, we can "treat the sampling pattern as a random variable".
+* We can use expectation values to show what the convergence rate is on the average, and then use "concentration inequalities" to show with what probability those convergence rates are guaranteed. I.e. "compute means and svd".
+
+Furthermore:
+* It is strange to assume that &lt;math>\mathbb{E}(F(A_k,B_k) - F(A_{k+1},B_{k+1})) = 0&lt;/math>, since the left hand side is always positive. All we can assume is that the mean is small. Though, we would definitely want the lower bound to be zero. And the higher bound can be used to estimate the convergence rate. But to be more accurate, should use concentration inequality.
+
+==Concentration==
+
+We want to compute
+:&lt;math>
+\mathbb{P}[F(A_k,B_k) - F(A_{k+1},B_{k+1}) &lt; \epsilon]
+&lt;/math>
+
+In words, this would tell us how close we are to a stationary point at &lt;math>k&lt;/math>th iteration.
+
+So my idea is to bound this difference in terms of surrogate functions. Than we would have a different probability inequality that would be a lower bound for this one. But this second inequality would be expressible in terms of the differences of latent vectors. This is just something to think about. Not sure if this actually leads to useful results.
+
+Another concentration inequality we might want to compute is:
+:&lt;math>
+\mathbb{P} \left[
+\left ( F( A_{1}, B_{1} ) - F^{\infty} ) \right) / K 
+&lt; \epsilon
+\right]
+&lt;/math>
+
+This should give the overall convergence rate in terms of probability density? Maybe read the other two papers? They might have more work in this framework.
+
+==More on debiasing==
+
+I think it could make sense to debias &lt;math>\mathbb{E}A_k&lt;/math> and &lt;math>\mathbb{E}B_k&lt;/math>. This would probably be more in hand with Yaniv et al.'s paper.
+
+Probably won't be that hard at least in rank=1 case.
+
+Even more, can do &lt;math>\mathbb{E}X_k = \mathbb{E}(A_k {B_k}^T)&lt;/math>.
+
+Ok, let's try it in rank=1 case. In this case, &lt;math>{A_{k+1}}a&lt;/math> and &lt;math>{A_k}a&lt;/math> are just scalars.
+:&lt;math>
+{A_{k+1}}_a = ({A_k}_a B_i B^i {\Omega_a^\bot}^i H + X_i B^i \Omega_a^i)/
+(B_i B^i {\Omega_a^\bot}^i H + B_i B^i \Omega_a^i + \lambda)
+&lt;/math>
+
+Here &lt;math>\Omega_a^i&lt;/math> is a vector that has all entries zero except for those &lt;math>(a,i)&lt;/math> that are measured. Let's assume that they are measured with uniform probability &lt;math>p&lt;/math>.
+
+Also, here &lt;math>H=\frac{1}{K^2}&lt;/math> is inverse of squared scalar debiaser.
+</textarea><div class="templatesUsed"><div class="mw-templatesUsedExplanation"><p>Template used on this page:
+</p></div><ul>
+<li><a href="https://wiki.nya.pink/wiki/Template:Collapse" title="Template:Collapse">Template:Collapse</a> (<a href="https://wiki.nya.pink/index.php?title=Template:Collapse&amp;action=edit" title="Template:Collapse">view source</a>) </li></ul></div><p id="mw-returnto">Return to <a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html" title="Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof">Research:Improving Low-rank Matrix Completion Algorithms Using Debiasing/Hastie 2014 softImpute-ALS debiasing/Debiased Algorithm/Outline of a proof</a>.</p>
+</div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html">https://wiki.nya.pink/wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof</a>"</div>
+		
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="https://wiki.nya.pink/index.php?title=Special:UserLogin&amp;returnto=Research%3AImproving+Low-rank+Matrix+Completion+Algorithms+Using+Debiasing%2FHastie+2014+softImpute-ALS+debiasing%2FDebiased+Algorithm%2FOutline+of+a+proof&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://wiki.nya.pink/index.php?title=Talk:Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible"><span><a href="wiki/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html">Read</a></span></li><li id="ca-viewsource" class="collapsible selected"><span><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;action=edit.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;action=history.html" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://wiki.nya.pink/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Lab Journal Wiki" title="Search Lab Journal Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="robots.txt.html" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="robots.txt.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.nya.pink/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="wiki/Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="wiki/Special:WhatLinksHere/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.nya.pink/wiki/Special:RecentChangesLinked/Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing/Hastie_2014_softImpute-ALS_debiasing/Debiased_Algorithm/Outline_of_a_proof" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="wiki/Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-info"><a href="./index.php%3Ftitle=Research:Improving_Low-rank_Matrix_Completion_Algorithms_Using_Debiasing%252FHastie_2014_softImpute-ALS_debiasing%252FDebiased_Algorithm%252FOutline_of_a_proof&amp;action=info.html" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:Privacy_policy" title="Lab Journal Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:About" title="Lab Journal Wiki:About">About Lab Journal Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://wiki.nya.pink/wiki/Lab_Journal_Wiki:General_disclaimer" title="Lab Journal Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="resources/assets/poweredby_mediawiki_132x47.png 1.5x, resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":108});});</script>
+</body>
+</html>
